@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D23F8FE8476E46B78251D359 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1685C0D730DD4647991C87BB /* libPods.a */; };
+		ED1B5CF618035493005E8F90 /* ProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1B5CF418035493005E8F90 /* ProfileVC.m */; };
+		ED1B5CF718035493005E8F90 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED1B5CF518035493005E8F90 /* ProfileVC.xib */; };
+		ED1B5CFB180354A3005E8F90 /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1B5CF9180354A3005E8F90 /* SearchVC.m */; };
+		ED1B5CFC180354A3005E8F90 /* SearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED1B5CFA180354A3005E8F90 /* SearchVC.xib */; };
+		ED1B5D0118046334005E8F90 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1B5D0018046334005E8F90 /* User.m */; };
+		ED1B5D101804B415005E8F90 /* Lato-Bol.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED1B5D061804B415005E8F90 /* Lato-Bol.ttf */; };
+		ED1B5D111804B415005E8F90 /* Lato-Hai.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED1B5D071804B415005E8F90 /* Lato-Hai.ttf */; };
+		ED1B5D121804B415005E8F90 /* Lato-BolIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED1B5D081804B415005E8F90 /* Lato-BolIta.ttf */; };
+		ED1B5D131804B415005E8F90 /* Lato-Reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED1B5D091804B415005E8F90 /* Lato-Reg.ttf */; };
+		ED1B5D141804B415005E8F90 /* Lato-Bla.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED1B5D0A1804B415005E8F90 /* Lato-Bla.ttf */; };
+		ED1B5D151804B415005E8F90 /* Lato-RegIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED1B5D0B1804B415005E8F90 /* Lato-RegIta.ttf */; };
+		ED1B5D161804B415005E8F90 /* Lato-Lig.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED1B5D0C1804B415005E8F90 /* Lato-Lig.ttf */; };
+		ED1B5D171804B415005E8F90 /* Lato-HaiIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED1B5D0D1804B415005E8F90 /* Lato-HaiIta.ttf */; };
+		ED1B5D181804B415005E8F90 /* Lato-LigIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED1B5D0E1804B415005E8F90 /* Lato-LigIta.ttf */; };
+		ED1B5D191804B415005E8F90 /* Lato-BlaIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED1B5D0F1804B415005E8F90 /* Lato-BlaIta.ttf */; };
+		ED1B5D1B1804BA34005E8F90 /* pink_button.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B5D1A1804BA34005E8F90 /* pink_button.png */; };
+		ED1B5D1D1804BB37005E8F90 /* gray_button.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B5D1C1804BB37005E8F90 /* gray_button.png */; };
+		ED81993917F791A400BB9BC7 /* connectClient.m in Sources */ = {isa = PBXBuildFile; fileRef = ED81993817F791A400BB9BC7 /* connectClient.m */; };
+		ED81993C17F798E700BB9BC7 /* AttendingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED81993B17F798E700BB9BC7 /* AttendingViewController.m */; };
+		ED81993E17F79BD000BB9BC7 /* Attending_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED81993D17F79BD000BB9BC7 /* Attending_iPhone.xib */; };
 		EDF7A1C817F76F2B00875DD8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF7A1C717F76F2B00875DD8 /* UIKit.framework */; };
 		EDF7A1CA17F76F2B00875DD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF7A1C917F76F2B00875DD8 /* Foundation.framework */; };
 		EDF7A1CC17F76F2B00875DD8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF7A1CB17F76F2B00875DD8 /* CoreGraphics.framework */; };
@@ -16,21 +37,13 @@
 		EDF7A1DA17F76F2B00875DD8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = EDF7A1D917F76F2B00875DD8 /* Default.png */; };
 		EDF7A1DC17F76F2B00875DD8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDF7A1DB17F76F2B00875DD8 /* Default@2x.png */; };
 		EDF7A1DE17F76F2B00875DD8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDF7A1DD17F76F2B00875DD8 /* Default-568h@2x.png */; };
-		EDF7A1E117F76F2B00875DD8 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF7A1E017F76F2B00875DD8 /* FirstViewController.m */; };
-		EDF7A1E317F76F2B00875DD8 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = EDF7A1E217F76F2B00875DD8 /* first.png */; };
-		EDF7A1E517F76F2B00875DD8 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDF7A1E417F76F2B00875DD8 /* first@2x.png */; };
-		EDF7A1E817F76F2B00875DD8 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF7A1E717F76F2B00875DD8 /* SecondViewController.m */; };
-		EDF7A1EA17F76F2B00875DD8 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = EDF7A1E917F76F2B00875DD8 /* second.png */; };
-		EDF7A1EC17F76F2B00875DD8 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDF7A1EB17F76F2B00875DD8 /* second@2x.png */; };
-		EDF7A1EF17F76F2C00875DD8 /* FirstViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDF7A1ED17F76F2C00875DD8 /* FirstViewController_iPhone.xib */; };
-		EDF7A1F217F76F2C00875DD8 /* FirstViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDF7A1F017F76F2C00875DD8 /* FirstViewController_iPad.xib */; };
-		EDF7A1F517F76F2C00875DD8 /* SecondViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDF7A1F317F76F2C00875DD8 /* SecondViewController_iPhone.xib */; };
-		EDF7A1F817F76F2C00875DD8 /* SecondViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDF7A1F617F76F2C00875DD8 /* SecondViewController_iPad.xib */; };
 		EDF7A20017F76F2C00875DD8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF7A1FF17F76F2C00875DD8 /* SenTestingKit.framework */; };
 		EDF7A20117F76F2C00875DD8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF7A1C717F76F2B00875DD8 /* UIKit.framework */; };
 		EDF7A20217F76F2C00875DD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF7A1C917F76F2B00875DD8 /* Foundation.framework */; };
 		EDF7A20A17F76F2C00875DD8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EDF7A20817F76F2C00875DD8 /* InfoPlist.strings */; };
 		EDF7A20D17F76F2C00875DD8 /* w2connectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF7A20C17F76F2C00875DD8 /* w2connectTests.m */; };
+		EDF7A21917F779B300875DD8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF7A21717F779B300875DD8 /* LoginViewController.m */; };
+		EDF7A21C17F77AF900875DD8 /* LoginView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDF7A21B17F77AF900875DD8 /* LoginView_iPhone.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +57,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		140E2582299F40BCBFE90CA2 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		1685C0D730DD4647991C87BB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED1B5CF318035493005E8F90 /* ProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileVC.h; sourceTree = "<group>"; };
+		ED1B5CF418035493005E8F90 /* ProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileVC.m; sourceTree = "<group>"; };
+		ED1B5CF518035493005E8F90 /* ProfileVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileVC.xib; path = w2connect/ProfileVC.xib; sourceTree = "<group>"; };
+		ED1B5CF8180354A3005E8F90 /* SearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchVC.h; path = ../SearchVC.h; sourceTree = "<group>"; };
+		ED1B5CF9180354A3005E8F90 /* SearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchVC.m; path = ../SearchVC.m; sourceTree = "<group>"; };
+		ED1B5CFA180354A3005E8F90 /* SearchVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchVC.xib; sourceTree = "<group>"; };
+		ED1B5CFF18046334005E8F90 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		ED1B5D0018046334005E8F90 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		ED1B5D041804AFA0005E8F90 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = ../Constants.h; sourceTree = "<group>"; };
+		ED1B5D061804B415005E8F90 /* Lato-Bol.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bol.ttf"; sourceTree = "<group>"; };
+		ED1B5D071804B415005E8F90 /* Lato-Hai.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hai.ttf"; sourceTree = "<group>"; };
+		ED1B5D081804B415005E8F90 /* Lato-BolIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BolIta.ttf"; sourceTree = "<group>"; };
+		ED1B5D091804B415005E8F90 /* Lato-Reg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Reg.ttf"; sourceTree = "<group>"; };
+		ED1B5D0A1804B415005E8F90 /* Lato-Bla.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bla.ttf"; sourceTree = "<group>"; };
+		ED1B5D0B1804B415005E8F90 /* Lato-RegIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-RegIta.ttf"; sourceTree = "<group>"; };
+		ED1B5D0C1804B415005E8F90 /* Lato-Lig.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Lig.ttf"; sourceTree = "<group>"; };
+		ED1B5D0D1804B415005E8F90 /* Lato-HaiIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HaiIta.ttf"; sourceTree = "<group>"; };
+		ED1B5D0E1804B415005E8F90 /* Lato-LigIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LigIta.ttf"; sourceTree = "<group>"; };
+		ED1B5D0F1804B415005E8F90 /* Lato-BlaIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlaIta.ttf"; sourceTree = "<group>"; };
+		ED1B5D1A1804BA34005E8F90 /* pink_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pink_button.png; sourceTree = "<group>"; };
+		ED1B5D1C1804BB37005E8F90 /* gray_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gray_button.png; sourceTree = "<group>"; };
+		ED81993717F791A400BB9BC7 /* connectClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = connectClient.h; sourceTree = "<group>"; };
+		ED81993817F791A400BB9BC7 /* connectClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = connectClient.m; sourceTree = "<group>"; };
+		ED81993A17F798E700BB9BC7 /* AttendingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendingViewController.h; sourceTree = "<group>"; };
+		ED81993B17F798E700BB9BC7 /* AttendingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendingViewController.m; sourceTree = "<group>"; };
+		ED81993D17F79BD000BB9BC7 /* Attending_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Attending_iPhone.xib; path = w2connect/Attending_iPhone.xib; sourceTree = "<group>"; };
 		EDF7A1C417F76F2B00875DD8 /* w2connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = w2connect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF7A1C717F76F2B00875DD8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EDF7A1C917F76F2B00875DD8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -57,24 +98,15 @@
 		EDF7A1D917F76F2B00875DD8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		EDF7A1DB17F76F2B00875DD8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		EDF7A1DD17F76F2B00875DD8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		EDF7A1DF17F76F2B00875DD8 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		EDF7A1E017F76F2B00875DD8 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		EDF7A1E217F76F2B00875DD8 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		EDF7A1E417F76F2B00875DD8 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		EDF7A1E617F76F2B00875DD8 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		EDF7A1E717F76F2B00875DD8 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		EDF7A1E917F76F2B00875DD8 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		EDF7A1EB17F76F2B00875DD8 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		EDF7A1EE17F76F2C00875DD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPhone.xib; sourceTree = "<group>"; };
-		EDF7A1F117F76F2C00875DD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPad.xib; sourceTree = "<group>"; };
-		EDF7A1F417F76F2C00875DD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPhone.xib; sourceTree = "<group>"; };
-		EDF7A1F717F76F2C00875DD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPad.xib; sourceTree = "<group>"; };
 		EDF7A1FE17F76F2C00875DD8 /* w2connectTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = w2connectTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF7A1FF17F76F2C00875DD8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		EDF7A20717F76F2C00875DD8 /* w2connectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "w2connectTests-Info.plist"; sourceTree = "<group>"; };
 		EDF7A20917F76F2C00875DD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EDF7A20B17F76F2C00875DD8 /* w2connectTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = w2connectTests.h; sourceTree = "<group>"; };
 		EDF7A20C17F76F2C00875DD8 /* w2connectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = w2connectTests.m; sourceTree = "<group>"; };
+		EDF7A21617F779B300875DD8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		EDF7A21717F779B300875DD8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		EDF7A21B17F77AF900875DD8 /* LoginView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginView_iPhone.xib; path = w2connect/LoginView_iPhone.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +117,7 @@
 				EDF7A1C817F76F2B00875DD8 /* UIKit.framework in Frameworks */,
 				EDF7A1CA17F76F2B00875DD8 /* Foundation.framework in Frameworks */,
 				EDF7A1CC17F76F2B00875DD8 /* CoreGraphics.framework in Frameworks */,
+				D23F8FE8476E46B78251D359 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +134,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED1B5CFE1804631B005E8F90 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED1B5CFF18046334005E8F90 /* User.h */,
+				ED1B5D0018046334005E8F90 /* User.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		ED1B5D021804633F005E8F90 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED1B5D1C1804BB37005E8F90 /* gray_button.png */,
+				ED1B5CFA180354A3005E8F90 /* SearchVC.xib */,
+				ED1B5D1A1804BA34005E8F90 /* pink_button.png */,
+				EDF7A21B17F77AF900875DD8 /* LoginView_iPhone.xib */,
+				ED81993D17F79BD000BB9BC7 /* Attending_iPhone.xib */,
+				ED1B5CF518035493005E8F90 /* ProfileVC.xib */,
+			);
+			name = Views;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		ED1B5D031804636B005E8F90 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EDF7A1D617F76F2B00875DD8 /* AppDelegate.h */,
+				EDF7A1D717F76F2B00875DD8 /* AppDelegate.m */,
+				EDF7A21617F779B300875DD8 /* LoginViewController.h */,
+				EDF7A21717F779B300875DD8 /* LoginViewController.m */,
+				ED81993A17F798E700BB9BC7 /* AttendingViewController.h */,
+				ED81993B17F798E700BB9BC7 /* AttendingViewController.m */,
+				ED1B5CF318035493005E8F90 /* ProfileVC.h */,
+				ED1B5CF418035493005E8F90 /* ProfileVC.m */,
+				ED1B5CF8180354A3005E8F90 /* SearchVC.h */,
+				ED1B5CF9180354A3005E8F90 /* SearchVC.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		ED1B5D051804B408005E8F90 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				ED1B5D061804B415005E8F90 /* Lato-Bol.ttf */,
+				ED1B5D071804B415005E8F90 /* Lato-Hai.ttf */,
+				ED1B5D081804B415005E8F90 /* Lato-BolIta.ttf */,
+				ED1B5D091804B415005E8F90 /* Lato-Reg.ttf */,
+				ED1B5D0A1804B415005E8F90 /* Lato-Bla.ttf */,
+				ED1B5D0B1804B415005E8F90 /* Lato-RegIta.ttf */,
+				ED1B5D0C1804B415005E8F90 /* Lato-Lig.ttf */,
+				ED1B5D0D1804B415005E8F90 /* Lato-HaiIta.ttf */,
+				ED1B5D0E1804B415005E8F90 /* Lato-LigIta.ttf */,
+				ED1B5D0F1804B415005E8F90 /* Lato-BlaIta.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		ED54A30A17F78A47009FB9D6 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				ED81993717F791A400BB9BC7 /* connectClient.h */,
+				ED81993817F791A400BB9BC7 /* connectClient.m */,
+			);
+			name = services;
+			sourceTree = "<group>";
+		};
 		EDF7A1BB17F76F2B00875DD8 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +207,7 @@
 				EDF7A20517F76F2C00875DD8 /* w2connectTests */,
 				EDF7A1C617F76F2B00875DD8 /* Frameworks */,
 				EDF7A1C517F76F2B00875DD8 /* Products */,
+				140E2582299F40BCBFE90CA2 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +227,7 @@
 				EDF7A1C917F76F2B00875DD8 /* Foundation.framework */,
 				EDF7A1CB17F76F2B00875DD8 /* CoreGraphics.framework */,
 				EDF7A1FF17F76F2C00875DD8 /* SenTestingKit.framework */,
+				1685C0D730DD4647991C87BB /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -134,20 +235,11 @@
 		EDF7A1CD17F76F2B00875DD8 /* w2connect */ = {
 			isa = PBXGroup;
 			children = (
-				EDF7A1D617F76F2B00875DD8 /* AppDelegate.h */,
-				EDF7A1D717F76F2B00875DD8 /* AppDelegate.m */,
-				EDF7A1DF17F76F2B00875DD8 /* FirstViewController.h */,
-				EDF7A1E017F76F2B00875DD8 /* FirstViewController.m */,
-				EDF7A1E217F76F2B00875DD8 /* first.png */,
-				EDF7A1E417F76F2B00875DD8 /* first@2x.png */,
-				EDF7A1E617F76F2B00875DD8 /* SecondViewController.h */,
-				EDF7A1E717F76F2B00875DD8 /* SecondViewController.m */,
-				EDF7A1E917F76F2B00875DD8 /* second.png */,
-				EDF7A1EB17F76F2B00875DD8 /* second@2x.png */,
-				EDF7A1ED17F76F2C00875DD8 /* FirstViewController_iPhone.xib */,
-				EDF7A1F017F76F2C00875DD8 /* FirstViewController_iPad.xib */,
-				EDF7A1F317F76F2C00875DD8 /* SecondViewController_iPhone.xib */,
-				EDF7A1F617F76F2C00875DD8 /* SecondViewController_iPad.xib */,
+				ED1B5D051804B408005E8F90 /* Fonts */,
+				ED1B5CFE1804631B005E8F90 /* Models */,
+				ED1B5D021804633F005E8F90 /* Views */,
+				ED1B5D031804636B005E8F90 /* Controllers */,
+				ED54A30A17F78A47009FB9D6 /* services */,
 				EDF7A1CE17F76F2B00875DD8 /* Supporting Files */,
 			);
 			path = w2connect;
@@ -156,6 +248,7 @@
 		EDF7A1CE17F76F2B00875DD8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ED1B5D041804AFA0005E8F90 /* Constants.h */,
 				EDF7A1CF17F76F2B00875DD8 /* w2connect-Info.plist */,
 				EDF7A1D017F76F2B00875DD8 /* InfoPlist.strings */,
 				EDF7A1D317F76F2B00875DD8 /* main.m */,
@@ -193,9 +286,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDF7A21017F76F2C00875DD8 /* Build configuration list for PBXNativeTarget "w2connect" */;
 			buildPhases = (
+				35AC4F9B07E64D03B2A7C460 /* Check Pods Manifest.lock */,
 				EDF7A1C017F76F2B00875DD8 /* Sources */,
 				EDF7A1C117F76F2B00875DD8 /* Frameworks */,
 				EDF7A1C217F76F2B00875DD8 /* Resources */,
+				E695B9249E1847A888FC16FB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -261,14 +356,22 @@
 				EDF7A1DA17F76F2B00875DD8 /* Default.png in Resources */,
 				EDF7A1DC17F76F2B00875DD8 /* Default@2x.png in Resources */,
 				EDF7A1DE17F76F2B00875DD8 /* Default-568h@2x.png in Resources */,
-				EDF7A1E317F76F2B00875DD8 /* first.png in Resources */,
-				EDF7A1E517F76F2B00875DD8 /* first@2x.png in Resources */,
-				EDF7A1EA17F76F2B00875DD8 /* second.png in Resources */,
-				EDF7A1EC17F76F2B00875DD8 /* second@2x.png in Resources */,
-				EDF7A1EF17F76F2C00875DD8 /* FirstViewController_iPhone.xib in Resources */,
-				EDF7A1F217F76F2C00875DD8 /* FirstViewController_iPad.xib in Resources */,
-				EDF7A1F517F76F2C00875DD8 /* SecondViewController_iPhone.xib in Resources */,
-				EDF7A1F817F76F2C00875DD8 /* SecondViewController_iPad.xib in Resources */,
+				EDF7A21C17F77AF900875DD8 /* LoginView_iPhone.xib in Resources */,
+				ED81993E17F79BD000BB9BC7 /* Attending_iPhone.xib in Resources */,
+				ED1B5CF718035493005E8F90 /* ProfileVC.xib in Resources */,
+				ED1B5CFC180354A3005E8F90 /* SearchVC.xib in Resources */,
+				ED1B5D101804B415005E8F90 /* Lato-Bol.ttf in Resources */,
+				ED1B5D111804B415005E8F90 /* Lato-Hai.ttf in Resources */,
+				ED1B5D121804B415005E8F90 /* Lato-BolIta.ttf in Resources */,
+				ED1B5D131804B415005E8F90 /* Lato-Reg.ttf in Resources */,
+				ED1B5D141804B415005E8F90 /* Lato-Bla.ttf in Resources */,
+				ED1B5D151804B415005E8F90 /* Lato-RegIta.ttf in Resources */,
+				ED1B5D161804B415005E8F90 /* Lato-Lig.ttf in Resources */,
+				ED1B5D171804B415005E8F90 /* Lato-HaiIta.ttf in Resources */,
+				ED1B5D181804B415005E8F90 /* Lato-LigIta.ttf in Resources */,
+				ED1B5D191804B415005E8F90 /* Lato-BlaIta.ttf in Resources */,
+				ED1B5D1B1804BA34005E8F90 /* pink_button.png in Resources */,
+				ED1B5D1D1804BB37005E8F90 /* gray_button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +386,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		35AC4F9B07E64D03B2A7C460 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E695B9249E1847A888FC16FB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EDF7A1FC17F76F2C00875DD8 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -305,8 +438,12 @@
 			files = (
 				EDF7A1D417F76F2B00875DD8 /* main.m in Sources */,
 				EDF7A1D817F76F2B00875DD8 /* AppDelegate.m in Sources */,
-				EDF7A1E117F76F2B00875DD8 /* FirstViewController.m in Sources */,
-				EDF7A1E817F76F2B00875DD8 /* SecondViewController.m in Sources */,
+				EDF7A21917F779B300875DD8 /* LoginViewController.m in Sources */,
+				ED81993917F791A400BB9BC7 /* connectClient.m in Sources */,
+				ED81993C17F798E700BB9BC7 /* AttendingViewController.m in Sources */,
+				ED1B5CF618035493005E8F90 /* ProfileVC.m in Sources */,
+				ED1B5CFB180354A3005E8F90 /* SearchVC.m in Sources */,
+				ED1B5D0118046334005E8F90 /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,38 +472,6 @@
 				EDF7A1D117F76F2B00875DD8 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		EDF7A1ED17F76F2C00875DD8 /* FirstViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EDF7A1EE17F76F2C00875DD8 /* en */,
-			);
-			name = FirstViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		EDF7A1F017F76F2C00875DD8 /* FirstViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EDF7A1F117F76F2C00875DD8 /* en */,
-			);
-			name = FirstViewController_iPad.xib;
-			sourceTree = "<group>";
-		};
-		EDF7A1F317F76F2C00875DD8 /* SecondViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EDF7A1F417F76F2C00875DD8 /* en */,
-			);
-			name = SecondViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		EDF7A1F617F76F2C00875DD8 /* SecondViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EDF7A1F717F76F2C00875DD8 /* en */,
-			);
-			name = SecondViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 		EDF7A20817F76F2C00875DD8 /* InfoPlist.strings */ = {
@@ -405,7 +510,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -430,7 +535,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -440,10 +545,12 @@
 		};
 		EDF7A21117F76F2C00875DD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 140E2582299F40BCBFE90CA2 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "w2connect/w2connect-Prefix.pch";
 				INFOPLIST_FILE = "w2connect/w2connect-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -451,10 +558,12 @@
 		};
 		EDF7A21217F76F2C00875DD8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 140E2582299F40BCBFE90CA2 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "w2connect/w2connect-Prefix.pch";
 				INFOPLIST_FILE = "w2connect/w2connect-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -513,6 +622,7 @@
 				EDF7A21217F76F2C00875DD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EDF7A21317F76F2C00875DD8 /* Build configuration list for PBXNativeTarget "w2connectTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +631,7 @@
 				EDF7A21517F76F2C00875DD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoginViewController.h"
+#import "AttendingViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UINavigationController *navigationController;
 
-@property (strong, nonatomic) UITabBarController *tabBarController;
+
 
 @end
