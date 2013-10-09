@@ -8,8 +8,8 @@
 
 #import "connectClient.h"
 #import <AFJSONRequestOperation.h>
+#import "Constants.h"
 
-NSString * const kBaseURLString = @"http://localhost:3000";
 
 @implementation connectClient
 
@@ -17,7 +17,7 @@ NSString * const kBaseURLString = @"http://localhost:3000";
     static connectClient *_sharedClient = nil;
     static dispatch_once_t oncePredicate;
     dispatch_once(&oncePredicate, ^{
-        _sharedClient = [[self alloc] initWithBaseURL:[NSURL URLWithString:kBaseURLString]];
+        _sharedClient = [[self alloc] initWithBaseURL:[NSURL URLWithString:kAPIBaseURLString]];
     });
     return _sharedClient;
 }

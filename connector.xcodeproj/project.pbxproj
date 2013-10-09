@@ -25,9 +25,15 @@
 		ED1B5D191804B415005E8F90 /* Lato-BlaIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED1B5D0F1804B415005E8F90 /* Lato-BlaIta.ttf */; };
 		ED1B5D1B1804BA34005E8F90 /* pink_button.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B5D1A1804BA34005E8F90 /* pink_button.png */; };
 		ED1B5D1D1804BB37005E8F90 /* gray_button.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B5D1C1804BB37005E8F90 /* gray_button.png */; };
+		ED1B5D251804C395005E8F90 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED1B5D1F1804C395005E8F90 /* libTestFlight.a */; };
+		ED1B5D261804C395005E8F90 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = ED1B5D201804C395005E8F90 /* README.md */; };
+		ED1B5D271804C395005E8F90 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = ED1B5D211804C395005E8F90 /* release_notes.md */; };
+		ED1B5D291804C3D4005E8F90 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED1B5D281804C3D4005E8F90 /* libz.dylib */; };
 		ED81993917F791A400BB9BC7 /* connectClient.m in Sources */ = {isa = PBXBuildFile; fileRef = ED81993817F791A400BB9BC7 /* connectClient.m */; };
 		ED81993C17F798E700BB9BC7 /* AttendingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED81993B17F798E700BB9BC7 /* AttendingViewController.m */; };
 		ED81993E17F79BD000BB9BC7 /* Attending_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED81993D17F79BD000BB9BC7 /* Attending_iPhone.xib */; };
+		ED94E74C180523130079F7A8 /* PhotoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ED94E74B180523130079F7A8 /* PhotoVC.m */; };
+		ED94E750180524030079F7A8 /* PhotoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED94E74F180524030079F7A8 /* PhotoVC.xib */; };
 		EDF7A1C817F76F2B00875DD8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF7A1C717F76F2B00875DD8 /* UIKit.framework */; };
 		EDF7A1CA17F76F2B00875DD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF7A1C917F76F2B00875DD8 /* Foundation.framework */; };
 		EDF7A1CC17F76F2B00875DD8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF7A1CB17F76F2B00875DD8 /* CoreGraphics.framework */; };
@@ -80,27 +86,37 @@
 		ED1B5D0F1804B415005E8F90 /* Lato-BlaIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlaIta.ttf"; sourceTree = "<group>"; };
 		ED1B5D1A1804BA34005E8F90 /* pink_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pink_button.png; sourceTree = "<group>"; };
 		ED1B5D1C1804BB37005E8F90 /* gray_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gray_button.png; sourceTree = "<group>"; };
+		ED1B5D1F1804C395005E8F90 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		ED1B5D201804C395005E8F90 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		ED1B5D211804C395005E8F90 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		ED1B5D221804C395005E8F90 /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
+		ED1B5D231804C395005E8F90 /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
+		ED1B5D241804C395005E8F90 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		ED1B5D281804C3D4005E8F90 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		ED81993717F791A400BB9BC7 /* connectClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = connectClient.h; sourceTree = "<group>"; };
 		ED81993817F791A400BB9BC7 /* connectClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = connectClient.m; sourceTree = "<group>"; };
 		ED81993A17F798E700BB9BC7 /* AttendingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendingViewController.h; sourceTree = "<group>"; };
 		ED81993B17F798E700BB9BC7 /* AttendingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendingViewController.m; sourceTree = "<group>"; };
 		ED81993D17F79BD000BB9BC7 /* Attending_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Attending_iPhone.xib; path = w2connect/Attending_iPhone.xib; sourceTree = "<group>"; };
-		EDF7A1C417F76F2B00875DD8 /* w2connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = w2connect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED94E74A180523130079F7A8 /* PhotoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoVC.h; sourceTree = "<group>"; };
+		ED94E74B180523130079F7A8 /* PhotoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoVC.m; sourceTree = "<group>"; };
+		ED94E74F180524030079F7A8 /* PhotoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoVC.xib; sourceTree = "<group>"; };
+		EDF7A1C417F76F2B00875DD8 /* connector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = connector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF7A1C717F76F2B00875DD8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EDF7A1C917F76F2B00875DD8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EDF7A1CB17F76F2B00875DD8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		EDF7A1CF17F76F2B00875DD8 /* w2connect-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "w2connect-Info.plist"; sourceTree = "<group>"; };
+		EDF7A1CF17F76F2B00875DD8 /* connector-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "connector-Info.plist"; sourceTree = "<group>"; };
 		EDF7A1D117F76F2B00875DD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EDF7A1D317F76F2B00875DD8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EDF7A1D517F76F2B00875DD8 /* w2connect-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "w2connect-Prefix.pch"; sourceTree = "<group>"; };
+		EDF7A1D517F76F2B00875DD8 /* connector-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "connector-Prefix.pch"; sourceTree = "<group>"; };
 		EDF7A1D617F76F2B00875DD8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EDF7A1D717F76F2B00875DD8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EDF7A1D917F76F2B00875DD8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		EDF7A1DB17F76F2B00875DD8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		EDF7A1DD17F76F2B00875DD8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		EDF7A1FE17F76F2C00875DD8 /* w2connectTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = w2connectTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDF7A1FE17F76F2C00875DD8 /* connectorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = connectorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF7A1FF17F76F2C00875DD8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		EDF7A20717F76F2C00875DD8 /* w2connectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "w2connectTests-Info.plist"; sourceTree = "<group>"; };
+		EDF7A20717F76F2C00875DD8 /* connectorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "connectorTests-Info.plist"; sourceTree = "<group>"; };
 		EDF7A20917F76F2C00875DD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EDF7A20B17F76F2C00875DD8 /* w2connectTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = w2connectTests.h; sourceTree = "<group>"; };
 		EDF7A20C17F76F2C00875DD8 /* w2connectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = w2connectTests.m; sourceTree = "<group>"; };
@@ -114,10 +130,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED1B5D291804C3D4005E8F90 /* libz.dylib in Frameworks */,
 				EDF7A1C817F76F2B00875DD8 /* UIKit.framework in Frameworks */,
 				EDF7A1CA17F76F2B00875DD8 /* Foundation.framework in Frameworks */,
 				EDF7A1CC17F76F2B00875DD8 /* CoreGraphics.framework in Frameworks */,
 				D23F8FE8476E46B78251D359 /* libPods.a in Frameworks */,
+				ED1B5D251804C395005E8F90 /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +170,7 @@
 				EDF7A21B17F77AF900875DD8 /* LoginView_iPhone.xib */,
 				ED81993D17F79BD000BB9BC7 /* Attending_iPhone.xib */,
 				ED1B5CF518035493005E8F90 /* ProfileVC.xib */,
+				ED94E74F180524030079F7A8 /* PhotoVC.xib */,
 			);
 			name = Views;
 			path = ..;
@@ -170,6 +189,8 @@
 				ED1B5CF418035493005E8F90 /* ProfileVC.m */,
 				ED1B5CF8180354A3005E8F90 /* SearchVC.h */,
 				ED1B5CF9180354A3005E8F90 /* SearchVC.m */,
+				ED94E74A180523130079F7A8 /* PhotoVC.h */,
+				ED94E74B180523130079F7A8 /* PhotoVC.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -191,6 +212,19 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		ED1B5D1E1804C394005E8F90 /* TestFlightSDK2.0.2 */ = {
+			isa = PBXGroup;
+			children = (
+				ED1B5D1F1804C395005E8F90 /* libTestFlight.a */,
+				ED1B5D201804C395005E8F90 /* README.md */,
+				ED1B5D211804C395005E8F90 /* release_notes.md */,
+				ED1B5D221804C395005E8F90 /* TestFlight+AsyncLogging.h */,
+				ED1B5D231804C395005E8F90 /* TestFlight+ManualSessions.h */,
+				ED1B5D241804C395005E8F90 /* TestFlight.h */,
+			);
+			path = TestFlightSDK2.0.2;
+			sourceTree = "<group>";
+		};
 		ED54A30A17F78A47009FB9D6 /* services */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +237,8 @@
 		EDF7A1BB17F76F2B00875DD8 = {
 			isa = PBXGroup;
 			children = (
+				ED1B5D281804C3D4005E8F90 /* libz.dylib */,
+				ED1B5D1E1804C394005E8F90 /* TestFlightSDK2.0.2 */,
 				EDF7A1CD17F76F2B00875DD8 /* w2connect */,
 				EDF7A20517F76F2C00875DD8 /* w2connectTests */,
 				EDF7A1C617F76F2B00875DD8 /* Frameworks */,
@@ -214,8 +250,8 @@
 		EDF7A1C517F76F2B00875DD8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EDF7A1C417F76F2B00875DD8 /* w2connect.app */,
-				EDF7A1FE17F76F2C00875DD8 /* w2connectTests.octest */,
+				EDF7A1C417F76F2B00875DD8 /* connector.app */,
+				EDF7A1FE17F76F2C00875DD8 /* connectorTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -249,10 +285,10 @@
 			isa = PBXGroup;
 			children = (
 				ED1B5D041804AFA0005E8F90 /* Constants.h */,
-				EDF7A1CF17F76F2B00875DD8 /* w2connect-Info.plist */,
+				EDF7A1CF17F76F2B00875DD8 /* connector-Info.plist */,
 				EDF7A1D017F76F2B00875DD8 /* InfoPlist.strings */,
 				EDF7A1D317F76F2B00875DD8 /* main.m */,
-				EDF7A1D517F76F2B00875DD8 /* w2connect-Prefix.pch */,
+				EDF7A1D517F76F2B00875DD8 /* connector-Prefix.pch */,
 				EDF7A1D917F76F2B00875DD8 /* Default.png */,
 				EDF7A1DB17F76F2B00875DD8 /* Default@2x.png */,
 				EDF7A1DD17F76F2B00875DD8 /* Default-568h@2x.png */,
@@ -273,7 +309,7 @@
 		EDF7A20617F76F2C00875DD8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EDF7A20717F76F2C00875DD8 /* w2connectTests-Info.plist */,
+				EDF7A20717F76F2C00875DD8 /* connectorTests-Info.plist */,
 				EDF7A20817F76F2C00875DD8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -282,9 +318,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EDF7A1C317F76F2B00875DD8 /* w2connect */ = {
+		EDF7A1C317F76F2B00875DD8 /* connector */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EDF7A21017F76F2C00875DD8 /* Build configuration list for PBXNativeTarget "w2connect" */;
+			buildConfigurationList = EDF7A21017F76F2C00875DD8 /* Build configuration list for PBXNativeTarget "connector" */;
 			buildPhases = (
 				35AC4F9B07E64D03B2A7C460 /* Check Pods Manifest.lock */,
 				EDF7A1C017F76F2B00875DD8 /* Sources */,
@@ -296,14 +332,14 @@
 			);
 			dependencies = (
 			);
-			name = w2connect;
+			name = connector;
 			productName = w2connect;
-			productReference = EDF7A1C417F76F2B00875DD8 /* w2connect.app */;
+			productReference = EDF7A1C417F76F2B00875DD8 /* connector.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EDF7A1FD17F76F2C00875DD8 /* w2connectTests */ = {
+		EDF7A1FD17F76F2C00875DD8 /* connectorTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EDF7A21317F76F2C00875DD8 /* Build configuration list for PBXNativeTarget "w2connectTests" */;
+			buildConfigurationList = EDF7A21317F76F2C00875DD8 /* Build configuration list for PBXNativeTarget "connectorTests" */;
 			buildPhases = (
 				EDF7A1F917F76F2C00875DD8 /* Sources */,
 				EDF7A1FA17F76F2C00875DD8 /* Frameworks */,
@@ -315,9 +351,9 @@
 			dependencies = (
 				EDF7A20417F76F2C00875DD8 /* PBXTargetDependency */,
 			);
-			name = w2connectTests;
+			name = connectorTests;
 			productName = w2connectTests;
-			productReference = EDF7A1FE17F76F2C00875DD8 /* w2connectTests.octest */;
+			productReference = EDF7A1FE17F76F2C00875DD8 /* connectorTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -329,7 +365,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Anna Billstrom";
 			};
-			buildConfigurationList = EDF7A1BF17F76F2B00875DD8 /* Build configuration list for PBXProject "w2connect" */;
+			buildConfigurationList = EDF7A1BF17F76F2B00875DD8 /* Build configuration list for PBXProject "connector" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -341,8 +377,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EDF7A1C317F76F2B00875DD8 /* w2connect */,
-				EDF7A1FD17F76F2C00875DD8 /* w2connectTests */,
+				EDF7A1C317F76F2B00875DD8 /* connector */,
+				EDF7A1FD17F76F2C00875DD8 /* connectorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -372,6 +408,9 @@
 				ED1B5D191804B415005E8F90 /* Lato-BlaIta.ttf in Resources */,
 				ED1B5D1B1804BA34005E8F90 /* pink_button.png in Resources */,
 				ED1B5D1D1804BB37005E8F90 /* gray_button.png in Resources */,
+				ED1B5D261804C395005E8F90 /* README.md in Resources */,
+				ED1B5D271804C395005E8F90 /* release_notes.md in Resources */,
+				ED94E750180524030079F7A8 /* PhotoVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +483,7 @@
 				ED1B5CF618035493005E8F90 /* ProfileVC.m in Sources */,
 				ED1B5CFB180354A3005E8F90 /* SearchVC.m in Sources */,
 				ED1B5D0118046334005E8F90 /* User.m in Sources */,
+				ED94E74C180523130079F7A8 /* PhotoVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,7 +500,7 @@
 /* Begin PBXTargetDependency section */
 		EDF7A20417F76F2C00875DD8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EDF7A1C317F76F2B00875DD8 /* w2connect */;
+			target = EDF7A1C317F76F2B00875DD8 /* connector */;
 			targetProxy = EDF7A20317F76F2C00875DD8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -529,7 +569,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Anna BILLSTROM (3PKSYT4R4Q)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Anna BILLSTROM (3PKSYT4R4Q)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -537,6 +578,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "528C2E12-0F05-415A-BDFB-7D27592A2A3B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "528C2E12-0F05-415A-BDFB-7D27592A2A3B";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -548,10 +591,15 @@
 			baseConfigurationReference = 140E2582299F40BCBFE90CA2 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "w2connect/w2connect-Prefix.pch";
-				INFOPLIST_FILE = "w2connect/w2connect-Info.plist";
+				GCC_PREFIX_HEADER = "w2connect/connector-Prefix.pch";
+				INFOPLIST_FILE = "w2connect/connector-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestFlightSDK2.0.2\"",
+				);
+				PRODUCT_NAME = connector;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -561,10 +609,15 @@
 			baseConfigurationReference = 140E2582299F40BCBFE90CA2 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "w2connect/w2connect-Prefix.pch";
-				INFOPLIST_FILE = "w2connect/w2connect-Info.plist";
+				GCC_PREFIX_HEADER = "w2connect/connector-Prefix.pch";
+				INFOPLIST_FILE = "w2connect/connector-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestFlightSDK2.0.2\"",
+				);
+				PRODUCT_NAME = connector;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -579,8 +632,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "w2connect/w2connect-Prefix.pch";
-				INFOPLIST_FILE = "w2connectTests/w2connectTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "w2connectTests/connectorTests-Info.plist";
+				PRODUCT_NAME = connectorTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -596,8 +649,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "w2connect/w2connect-Prefix.pch";
-				INFOPLIST_FILE = "w2connectTests/w2connectTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "w2connectTests/connectorTests-Info.plist";
+				PRODUCT_NAME = connectorTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -606,7 +659,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EDF7A1BF17F76F2B00875DD8 /* Build configuration list for PBXProject "w2connect" */ = {
+		EDF7A1BF17F76F2B00875DD8 /* Build configuration list for PBXProject "connector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EDF7A20E17F76F2C00875DD8 /* Debug */,
@@ -615,7 +668,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EDF7A21017F76F2C00875DD8 /* Build configuration list for PBXNativeTarget "w2connect" */ = {
+		EDF7A21017F76F2C00875DD8 /* Build configuration list for PBXNativeTarget "connector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EDF7A21117F76F2C00875DD8 /* Debug */,
@@ -624,7 +677,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EDF7A21317F76F2C00875DD8 /* Build configuration list for PBXNativeTarget "w2connectTests" */ = {
+		EDF7A21317F76F2C00875DD8 /* Build configuration list for PBXNativeTarget "connectorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EDF7A21417F76F2C00875DD8 /* Debug */,

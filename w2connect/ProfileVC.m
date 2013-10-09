@@ -9,6 +9,7 @@
 #import "ProfileVC.h"
 #import "User.h"
 #import "Constants.h"
+#import "PhotoVC.h"
 
 @interface ProfileVC ()
 
@@ -59,6 +60,8 @@
 }
 
 -(void)launchPhoto:(id)sender{
+    PhotoVC *photoVC = [[PhotoVC alloc] initWithNibName:@"PhotoVC" bundle:nil];
+    [[self navigationController] pushViewController:photoVC animated:NO];
     
 }
 
