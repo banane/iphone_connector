@@ -13,6 +13,7 @@
 #import <AFNetworking.h>
 #import "ProfileVC.h"
 #import "User.h"
+#import "wizard1VC.h"
 
 
 @interface LoginViewController ()
@@ -69,7 +70,7 @@
         // 6 - Request succeeded block
         NSLog(@"%@", JSON);
         [[User instance ] saveUser:JSON[@"person"]];
-        [self loadAttending];
+        [self determineNextView];
         
         
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
@@ -87,6 +88,17 @@
         // access women2 site in safari
 }
 
+-(void)determineNextView{
+    // may move this ahead if they don't have to log in
+    if([[User instance] numTimesLogin] <= 1){
+        [self startWizard];
+    } else if([[[User instance] profilePhoto] length] == 0){
+        [self startWizard];
+    } else {
+        [self loadAttending];
+    }
+}
+
 - (void)loadAttending{
     
     /* check if first time, route to wizard, else: */
@@ -95,6 +107,11 @@
 
     
 }
+-(void)startWizard{
+    wizard1VC *wvc = [[wizard1VC alloc] initWithNibName:@"wizard1VC" bundle:nil];
+    [[self navigationController] pushViewController:wvc animated:NO];
+}
+
 
 
 @end

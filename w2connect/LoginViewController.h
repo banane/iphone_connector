@@ -30,6 +30,9 @@ extern NSString * const kBaseURLString;
 
 -(IBAction)viewEventListing:(id)sender;
 -(IBAction)login:(id)sender;
+-(void)determineNextView;
+-(void)loadAttending;
+-(void)startWizard;
 
 
 

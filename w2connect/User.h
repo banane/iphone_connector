@@ -11,12 +11,20 @@
 @interface User : NSObject {
     NSString *UID;
     NSString *email;
+    int numTimesLogin;
+    NSString *profilePhoto;
 }
 
 @property (nonatomic, strong) NSString *UID;
 @property (nonatomic, strong) NSString *email;
+@property (nonatomic, strong) NSString *profilePhoto;
+@property int numTimesLogin;
+
 
 + (User *) instance;
 - (void) saveUser:(NSDictionary *)params;
+- (void) loadFromDefaults;
+- (void) saveToDefaults;
+- (void) incrementVisit;
 
 @end
