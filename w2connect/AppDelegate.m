@@ -24,7 +24,7 @@
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:loginVC];
     [self.window addSubview:self.navigationController.view];
     self.navigationController.navigationBar.hidden = YES;
-    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+//    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
     [TestFlight takeOff:@"75456710-2e74-46c0-a034-57293f61079e"];
     
     [self.window makeKeyAndVisible];

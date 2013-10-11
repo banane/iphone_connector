@@ -8,6 +8,7 @@
 
 #import "SearchVC.h"
 #import "Constants.h"
+#import "User.h"
 
 @interface SearchVC ()
 
@@ -38,7 +39,7 @@
                                  action:@selector(backToAttending:)];
     self.navigationItem.leftBarButtonItem = attendingBtn;
     
-    NSString *stringUrl = [NSString stringWithFormat:@"%@/api/v1/search", kAPIBaseURLString];
+    NSString *stringUrl = [NSString stringWithFormat:@"%@/api/v1/search?auth_token=%@", kAPIBaseURLString, [[User instance] token]];
     NSURL *url = [[NSURL alloc] initWithString:stringUrl];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     [self.webView loadRequest:request];

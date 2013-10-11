@@ -60,21 +60,22 @@
     
     NSDictionary *params = [[NSDictionary alloc] initWithObjectsAndKeys:self.email.text, @"email", nil];
     connectClient *client = [connectClient sharedClient];
-    NSString *path = @"/api/v1/logins";
-  //  NSString *email = self.email.text;
+    NSString *path = @"/api/v1/tokens.json";
 
     NSURLRequest* request = [client requestWithMethod:@"POST" path:path parameters:params];
-   
     
     AFJSONRequestOperation* operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         // 6 - Request succeeded block
-        NSLog(@"%@", JSON);
-        [[User instance ] saveUser:JSON[@"person"]];
+        NSLog(@"response from json: %@", JSON);
+        NSDictionary *params = JSON;
+        
+        [[User instance ] saveUser:params email:self.email.text];
+        
         [self determineNextView];
         
         
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        NSLog(@"failure");
+        NSLog(@"failure to login");
         // 7 - Request failed block
     }];
     // 8 - Start request
@@ -90,13 +91,13 @@
 
 -(void)determineNextView{
     // may move this ahead if they don't have to log in
-    if([[User instance] numTimesLogin] <= 1){
+ /*   if([[User instance] numTimesLogin] <= 1){
         [self startWizard];
     } else if([[[User instance] profilePhoto] length] == 0){
         [self startWizard];
-    } else {
+    } else {*/
         [self loadAttending];
-    }
+//    }
 }
 
 - (void)loadAttending{

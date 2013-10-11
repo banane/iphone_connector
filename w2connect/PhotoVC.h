@@ -12,14 +12,17 @@
     IBOutlet UIImageView *imageView;
     IBOutlet UILabel *descriptionLabel;
     IBOutlet UIButton *photoBtn;
+    bool fromWizard;
 }
 
 
 @property (nonatomic, strong) IBOutlet UIImageView *imageView;
 @property (nonatomic, strong) IBOutlet UILabel *descriptionLabel;
 @property (nonatomic, strong) IBOutlet UIButton *photoBtn;
+@property bool fromWizard;
 
 
 -(IBAction)takePhoto:(id)sender;
+-(void)loadProfile;
 
 @end

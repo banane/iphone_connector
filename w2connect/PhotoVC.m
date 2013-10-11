@@ -7,9 +7,11 @@
 //
 
 #import "PhotoVC.h"
+#import "ProfileVC.h"
+#import "User.h"
 
 @implementation PhotoVC
-@synthesize imageView, descriptionLabel, photoBtn;
+@synthesize imageView, descriptionLabel, photoBtn, fromWizard;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,9 +43,15 @@
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     self.imageView.image = chosenImage;
-    
     [picker dismissViewControllerAnimated:YES completion:NULL];
+    /* TODO:  upload to s3 */
+    [self loadProfile];
     
+}
+
+-(void)loadProfile{
+    ProfileVC *pvc = [[ProfileVC alloc] initWithNibName:@"ProfileVC" bundle:nil];
+    [[self navigationController] pushViewController:pvc animated:NO];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {

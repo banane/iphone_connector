@@ -10,6 +10,7 @@
 #import "User.h"
 #import "Constants.h"
 #import "PhotoVC.h"
+#import "AttendingViewController.h"
 
 @interface ProfileVC ()
 
@@ -50,7 +51,7 @@
     self.navigationItem.rightBarButtonItem = backToAttending;
     
     /* get uid from app */
-    NSString *stringUrl = [NSString stringWithFormat:@"%@/api/v1/people/%@/edit",kAPIBaseURLString, [[User instance] UID]];
+    NSString *stringUrl = [NSString stringWithFormat:@"%@/api/v1/people/%@/edit?auth_token=%@",kAPIBaseURLString, [[User instance] UID], [[User instance] token]];
     NSURL *url = [[NSURL alloc] initWithString:stringUrl];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     [self.webView loadRequest:request];
@@ -66,7 +67,13 @@
 }
 
 -(void)backToAttending:(id)sender{
-    [[self navigationController] popViewControllerAnimated:NO];
+    // check if attending is next
+    AttendingViewController *attVC = [[AttendingViewController alloc] initWithNibName:@"Attending_iPhone" bundle:nil];
+    if([[[self navigationController] viewControllers] containsObject:attVC]){
+        [[self navigationController] popViewControllerAnimated:NO];
+    } else {
+        [[self navigationController] pushViewController:attVC animated:NO];
+    }
 
 }
 

@@ -372,6 +372,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Anna Billstrom";
+				TargetAttributes = {
+					EDF7A1C317F76F2B00875DD8 = {
+						DevelopmentTeam = 3PKSYT4R4Q;
+					};
+				};
 			};
 			buildConfigurationList = EDF7A1BF17F76F2B00875DD8 /* Build configuration list for PBXProject "connector" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -600,6 +605,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 140E2582299F40BCBFE90CA2 /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "w2connect/connector-Prefix.pch";
 				INFOPLIST_FILE = "w2connect/connector-Info.plist";
@@ -609,6 +616,7 @@
 					"\"$(SRCROOT)/TestFlightSDK2.0.2\"",
 				);
 				PRODUCT_NAME = connector;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -618,6 +626,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 140E2582299F40BCBFE90CA2 /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "w2connect/connector-Prefix.pch";
 				INFOPLIST_FILE = "w2connect/connector-Info.plist";
@@ -627,6 +637,7 @@
 					"\"$(SRCROOT)/TestFlightSDK2.0.2\"",
 				);
 				PRODUCT_NAME = connector;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

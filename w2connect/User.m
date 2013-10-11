@@ -9,7 +9,7 @@
 #import "User.h"
 
 @implementation User
-@synthesize UID,email,numTimesLogin,profilePhoto;
+@synthesize UID,email,numTimesLogin,profilePhoto,token;
 
 static User * _instance = nil;
 
@@ -32,6 +32,7 @@ static User * _instance = nil;
     self.email = @"";
     self.numTimesLogin = 0;
     self.profilePhoto = @"";
+    self.token = @"";
     
     return self;
 }
@@ -41,10 +42,11 @@ static User * _instance = nil;
     
 }
 
--(void)saveUser:(NSDictionary *)params{
-    self.email = params[@"email"];
+-(void)saveUser:(NSDictionary *)params email:(NSString *)theEmail{
+    self.email = theEmail;
     self.UID = params[@"id"];
     self.profilePhoto = params[@"profile_photo"];
+    self.token = params[@"token"];
     
 }
 

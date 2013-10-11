@@ -13,16 +13,18 @@
     NSString *email;
     int numTimesLogin;
     NSString *profilePhoto;
+    NSString *token;
 }
 
 @property (nonatomic, strong) NSString *UID;
 @property (nonatomic, strong) NSString *email;
 @property (nonatomic, strong) NSString *profilePhoto;
+@property (nonatomic, strong) NSString *token;
 @property int numTimesLogin;
 
 
 + (User *) instance;
-- (void) saveUser:(NSDictionary *)params;
+- (void) saveUser:(NSDictionary *)params email:(NSString *)theEmail;
 - (void) loadFromDefaults;
 - (void) saveToDefaults;
 - (void) incrementVisit;

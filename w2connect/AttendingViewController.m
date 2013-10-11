@@ -10,6 +10,7 @@
 #import "ProfileVC.h"
 #import "SearchVC.h"
 #import "Constants.h"
+#import "User.h"
 
 @implementation AttendingViewController
 @synthesize webView;
@@ -44,7 +45,7 @@
                                   action:@selector(viewSearch:)];
     self.navigationItem.rightBarButtonItem = searchBtn;
     
-    NSString *stringUrl = [NSString stringWithFormat:@"%@/api/v1/people",kAPIBaseURLString];
+    NSString *stringUrl = [NSString stringWithFormat:@"%@/api/v1/people?auth_token=%@",kAPIBaseURLString,[[User instance] token]];
     NSURL *url = [[NSURL alloc] initWithString:stringUrl];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     [self.webView loadRequest:request];
