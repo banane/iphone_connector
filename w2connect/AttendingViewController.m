@@ -32,14 +32,15 @@
     self.navigationItem.hidesBackButton = YES;
     
     UIBarButtonItem *profileBtn = [[UIBarButtonItem alloc]
-                                initWithTitle:@"Profile"
+                                initWithImage:[UIImage imageNamed:@"profile"]
                                 style:UIBarButtonItemStyleBordered
                                 target:self
-                                action:@selector(viewProfile:)];
+                                action:@selector(viewProfile:)
+                                ];
     self.navigationItem.leftBarButtonItem = profileBtn;
     
     UIBarButtonItem *searchBtn = [[UIBarButtonItem alloc]
-                                  initWithTitle:@"Search"
+                                  initWithImage:[UIImage imageNamed:@"search"]
                                   style:UIBarButtonItemStyleBordered
                                   target:self
                                   action:@selector(viewSearch:)];

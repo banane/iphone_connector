@@ -33,7 +33,7 @@
     self.navigationItem.hidesBackButton = YES;
     
     UIBarButtonItem *attendingBtn = [[UIBarButtonItem alloc]
-                                 initWithTitle:@"Attending"
+                                     initWithImage:[UIImage imageNamed:@"attendeelist"]
                                  style:UIBarButtonItemStyleBordered
                                  target:self
                                  action:@selector(backToAttending:)];

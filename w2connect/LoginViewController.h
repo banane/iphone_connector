@@ -16,14 +16,12 @@ extern NSString * const kBaseURLString;
 
 @interface LoginViewController : UIViewController <UITextFieldDelegate> {
     UITextField *email;
-    IBOutlet UILabel *titleLabel;
     IBOutlet UILabel *accessLabel;
     IBOutlet UILabel *regLabel;
     
 }
 
 @property (strong, nonatomic) IBOutlet UITextField *email;
-@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *accessLabel;
 @property (strong, nonatomic) IBOutlet UILabel *regLabel;
 

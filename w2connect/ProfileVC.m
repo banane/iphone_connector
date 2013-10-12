@@ -37,14 +37,14 @@
     self.navigationItem.hidesBackButton = YES;
     
     UIBarButtonItem *photoBtn = [[UIBarButtonItem alloc]
-                                   initWithTitle:@"Photo"
+                                   initWithImage:[UIImage imageNamed:@"photo"]
                                    style:UIBarButtonItemStyleBordered
                                    target:self
                                    action:@selector(launchPhoto:)];
     self.navigationItem.leftBarButtonItem = photoBtn;
     
     UIBarButtonItem *backToAttending = [[UIBarButtonItem alloc]
-                                  initWithTitle:@"Attending"
+                                  initWithImage:[UIImage imageNamed:@"attendeelist"]
                                   style:UIBarButtonItemStyleBordered
                                   target:self
                                   action:@selector(backToAttending:)];

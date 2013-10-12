@@ -22,7 +22,7 @@
 
 @implementation LoginViewController
 
-@synthesize email, titleLabel, accessLabel, regLabel;
+@synthesize email, accessLabel, regLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,8 +37,6 @@
 - (void)viewDidLoad
 {
     UIFont *customFont = [UIFont fontWithName:@"Lato-Bol" size:18.0f];
-//    [self.titleLabel setFont:customFont];
-//    [self.titleLabel setTextColor:[UIColor blueColor]];
 
     
     self.accessLabel.font = customFont;

@@ -27,6 +27,17 @@
 
 - (void)viewDidLoad{
     
+    self.navigationController.navigationBar.hidden = NO;
+    self.navigationItem.hidesBackButton = YES;
+    
+    UIBarButtonItem *profileBtn = [[UIBarButtonItem alloc]
+                                     initWithImage:[UIImage imageNamed:@"profile"]
+                                     style:UIBarButtonItemStyleBordered
+                                     target:self
+                                     action:@selector(loadProfile)];
+    self.navigationItem.leftBarButtonItem = profileBtn;
+     [super viewDidLoad];
+   
 }
 
 -(IBAction)takePhoto:(id)sender{
@@ -50,8 +61,7 @@
 }
 
 -(void)loadProfile{
-    ProfileVC *pvc = [[ProfileVC alloc] initWithNibName:@"ProfileVC" bundle:nil];
-    [[self navigationController] pushViewController:pvc animated:NO];
+    [[self navigationController] popViewControllerAnimated:NO];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
