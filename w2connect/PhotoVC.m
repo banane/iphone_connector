@@ -9,6 +9,11 @@
 #import "PhotoVC.h"
 #import "ProfileVC.h"
 #import "User.h"
+#import <AWSS3/AWSS3.h>
+#import "connectClient.h"
+#import <AFNetworking.h>
+#include <stdlib.h>
+
 
 @implementation PhotoVC
 @synthesize imageView, descriptionLabel, photoBtn, fromWizard;
@@ -50,13 +55,60 @@
     
 }
 
+-(void)uploadImageToAWS:(UIImage *)image {
+    int randomNum = arc4random() % 10000;
+    NSString *imageKeyName = [NSString stringWithFormat:@"profile_%@_%d.png",[[User instance] UID], randomNum];
+    NSString *imageBucketName = @"mobileprofiles";
+
+    
+    AmazonS3Client *s3 = [[AmazonS3Client alloc] initWithAccessKey:@"AKIAI6P3ZBS52HYSAJEA" withSecretKey:@"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"];
+    S3PutObjectRequest *por = [[S3PutObjectRequest alloc] initWithKey:imageKeyName inBucket:imageBucketName];
+    por.contentType = @"image/jpeg";
+    NSData *imageData = UIImagePNGRepresentation(image);
+    por.data = imageData;
+     por.cannedACL   = [S3CannedACL publicRead];
+    [s3 putObject:por];
+
+    S3ResponseHeaderOverrides *override = [[S3ResponseHeaderOverrides alloc] init];
+    override.contentType = @"image/png";
+    S3GetPreSignedURLRequest *gpsur = [[S3GetPreSignedURLRequest alloc] init] ;
+    gpsur.key     = imageKeyName;
+    gpsur.bucket  = imageBucketName;
+    int seconds = 3600 * 24 * 365;
+    gpsur.expires = [NSDate dateWithTimeIntervalSinceNow:(NSTimeInterval) seconds];
+    gpsur.responseHeaderOverrides = override;
+    NSURL *url = [s3 getPreSignedURL:gpsur];
+    NSString *urlString = [url absoluteString];
+    [self postToServer:urlString];
+    
+}
+- (void)postToServer:(NSString *)profileUrlString{
+    NSDictionary *params = [[NSDictionary alloc] initWithObjectsAndKeys:profileUrlString, @"profile_photo",[[User instance] token], @"auth_token", nil];
+    connectClient *client = [connectClient sharedClient];
+    NSString *path = [NSString stringWithFormat:@"/api/v1/people/%@.json", [[User instance] UID]];
+    
+    NSURLRequest* request = [client requestWithMethod:@"PUT" path:path parameters:params];
+    
+    AFJSONRequestOperation* operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        // 6 - Request succeeded block
+        NSLog(@"profile photo upload response from json: %@", JSON);
+        [self loadProfile];
+        
+        
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        NSLog(@"failure to post photo");
+    }];
+
+    [operation start];
+}
+
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     self.imageView.image = chosenImage;
     [picker dismissViewControllerAnimated:YES completion:NULL];
     /* TODO:  upload to s3 */
-    [self loadProfile];
+    [self uploadImageToAWS:chosenImage];
     
 }
 

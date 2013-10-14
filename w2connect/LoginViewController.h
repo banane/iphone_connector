@@ -18,12 +18,14 @@ extern NSString * const kBaseURLString;
     UITextField *email;
     IBOutlet UILabel *accessLabel;
     IBOutlet UILabel *regLabel;
+    IBOutlet UILabel *errors;
     
 }
 
 @property (strong, nonatomic) IBOutlet UITextField *email;
 @property (strong, nonatomic) IBOutlet UILabel *accessLabel;
 @property (strong, nonatomic) IBOutlet UILabel *regLabel;
+@property (strong, nonatomic) IBOutlet UILabel *errors;
 
 
 -(IBAction)viewEventListing:(id)sender;

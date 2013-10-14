@@ -30,6 +30,11 @@
     return self;
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [webView reload];
+}
+
 - (void)viewDidLoad
 {
     

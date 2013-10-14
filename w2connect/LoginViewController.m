@@ -22,7 +22,7 @@
 
 @implementation LoginViewController
 
-@synthesize email, accessLabel, regLabel;
+@synthesize email, accessLabel, regLabel, errors;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -54,6 +54,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    
+    [textField resignFirstResponder];
+    return YES;
+}
+
 - (IBAction)login:(id)sender{
     
     NSDictionary *params = [[NSDictionary alloc] initWithObjectsAndKeys:self.email.text, @"email", nil];
@@ -73,6 +79,7 @@
         
         
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        self.errors.text = @"Unable to log you in for this event.";
         NSLog(@"failure to login");
         // 7 - Request failed block
     }];
@@ -89,13 +96,13 @@
 
 -(void)determineNextView{
     // may move this ahead if they don't have to log in
- /*   if([[User instance] numTimesLogin] <= 1){
+    if([[User instance] numTimesLogin] <= 1){
         [self startWizard];
     } else if([[[User instance] profilePhoto] length] == 0){
         [self startWizard];
-    } else {*/
+    } else {
         [self loadAttending];
-//    }
+    }
 }
 
 - (void)loadAttending{

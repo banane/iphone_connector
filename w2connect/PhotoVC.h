@@ -24,5 +24,7 @@
 
 -(IBAction)takePhoto:(id)sender;
 -(void)loadProfile;
+-(void) uploadImageToAWS:chosenImage;
+-(void)postToServer:(NSString *)profileUrlString;
 
 @end
