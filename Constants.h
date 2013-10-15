@@ -14,4 +14,7 @@
 //#define kAPIBaseURLString @"http://10.0.1.155:3000"
 
 
+#define kAWSPublicAccessKey @"AKIAI6P3ZBS52HYSAJEA"
+#define kAWSSecretKey @"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"
+
 #endif

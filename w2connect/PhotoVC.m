@@ -13,10 +13,12 @@
 #import "connectClient.h"
 #import <AFNetworking.h>
 #include <stdlib.h>
+#include "Constants.h"
+#include "wizard1VC.h"
 
 
 @implementation PhotoVC
-@synthesize imageView, descriptionLabel, photoBtn, fromWizard;
+@synthesize imageView, descriptionLabel, photoBtn;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -56,12 +58,14 @@
 }
 
 -(void)uploadImageToAWS:(UIImage *)image {
+    
     int randomNum = arc4random() % 10000;
     NSString *imageKeyName = [NSString stringWithFormat:@"profile_%@_%d.png",[[User instance] UID], randomNum];
     NSString *imageBucketName = @"mobileprofiles";
 
     
-    AmazonS3Client *s3 = [[AmazonS3Client alloc] initWithAccessKey:@"AKIAI6P3ZBS52HYSAJEA" withSecretKey:@"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"];
+    AmazonS3Client *s3 = [[AmazonS3Client alloc] initWithAccessKey:kAWSPublicAccessKey
+                                                     withSecretKey:kAWSSecretKey];
     S3PutObjectRequest *por = [[S3PutObjectRequest alloc] initWithKey:imageKeyName inBucket:imageBucketName];
     por.contentType = @"image/jpeg";
     NSData *imageData = UIImagePNGRepresentation(image);
@@ -92,6 +96,7 @@
     AFJSONRequestOperation* operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         // 6 - Request succeeded block
         NSLog(@"profile photo upload response from json: %@", JSON);
+        
         [self loadProfile];
         
         
@@ -105,15 +110,38 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    self.imageView.image = chosenImage;
+  //  self.imageView.image = chosenImage;
     [picker dismissViewControllerAnimated:YES completion:NULL];
-    /* TODO:  upload to s3 */
+    chosenImage = [self reduceSize:chosenImage];
     [self uploadImageToAWS:chosenImage];
     
 }
 
+-(UIImage *) reduceSize:(UIImage *) image {
+    UIGraphicsBeginImageContext(CGSizeMake(200,200));
+    
+    CGContextRef  *context = UIGraphicsGetCurrentContext();
+    
+    [image drawInRect: CGRectMake(0, 0, 200, 200)];
+    
+    UIImage  *smallImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    return smallImage;
+}
+
 -(void)loadProfile{
-    [[self navigationController] popViewControllerAnimated:NO];
+    bool fromWizard = NO;
+    for( UIViewController* aView in [[self navigationController] viewControllers]){
+        if([aView isKindOfClass:[wizard1VC class]]){
+            ProfileVC *pvc = [[ProfileVC alloc] initWithNibName:@"ProfileVC" bundle:nil];
+            [[self navigationController] pushViewController:pvc animated:NO];
+            fromWizard = YES;
+        }
+    }
+    if(!fromWizard){
+        [[self navigationController] popViewControllerAnimated:NO];
+    }
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {

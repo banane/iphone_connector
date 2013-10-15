@@ -95,10 +95,7 @@
 }
 
 -(void)determineNextView{
-    // may move this ahead if they don't have to log in
-    if([[User instance] numTimesLogin] <= 1){
-        [self startWizard];
-    } else if([[[User instance] profilePhoto] length] == 0){
+   if([[[User instance] profilePhoto] length] == 0){
         [self startWizard];
     } else {
         [self loadAttending];
