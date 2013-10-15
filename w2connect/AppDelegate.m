@@ -26,6 +26,7 @@
     self.navigationController.navigationBar.hidden = YES;
 //    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
     [TestFlight takeOff:@"75456710-2e74-46c0-a034-57293f61079e"];
+ //   self.window.rootViewController = loginVC;
     
     [self.window makeKeyAndVisible];
     return YES;
@@ -43,7 +44,6 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
@@ -51,7 +51,7 @@
     [[User instance] loadFromDefaults];
     [[User instance] incrementVisit];
     NSLog(@"%d number of times visited", [[User instance] numTimesLogin]);
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+   
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -59,18 +59,5 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-/*
-// Optional UITabBarControllerDelegate method.
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
-{
-}
-*/
-
-/*
-// Optional UITabBarControllerDelegate method.
-- (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed
-{
-}
-*/
 
 @end

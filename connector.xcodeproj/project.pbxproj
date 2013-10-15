@@ -29,10 +29,6 @@
 		ED1B5D191804B415005E8F90 /* Lato-BlaIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED1B5D0F1804B415005E8F90 /* Lato-BlaIta.ttf */; };
 		ED1B5D1B1804BA34005E8F90 /* pink_button.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B5D1A1804BA34005E8F90 /* pink_button.png */; };
 		ED1B5D1D1804BB37005E8F90 /* gray_button.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B5D1C1804BB37005E8F90 /* gray_button.png */; };
-		ED1B5D251804C395005E8F90 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED1B5D1F1804C395005E8F90 /* libTestFlight.a */; };
-		ED1B5D261804C395005E8F90 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = ED1B5D201804C395005E8F90 /* README.md */; };
-		ED1B5D271804C395005E8F90 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = ED1B5D211804C395005E8F90 /* release_notes.md */; };
-		ED1B5D291804C3D4005E8F90 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED1B5D281804C3D4005E8F90 /* libz.dylib */; };
 		ED2935991808C40D008537F1 /* women2logo.png in Resources */ = {isa = PBXBuildFile; fileRef = ED2935981808C40C008537F1 /* women2logo.png */; };
 		ED2935A41808C4F6008537F1 /* attendeelist@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED29359A1808C4F6008537F1 /* attendeelist@2x.png */; };
 		ED2935A51808C4F6008537F1 /* attendeelist.png in Resources */ = {isa = PBXBuildFile; fileRef = ED29359B1808C4F6008537F1 /* attendeelist.png */; };
@@ -40,6 +36,7 @@
 		ED2935AB1808C4F6008537F1 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = ED2935A11808C4F6008537F1 /* search.png */; };
 		ED2935AC1808C4F6008537F1 /* addphoto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED2935A21808C4F6008537F1 /* addphoto@2x.png */; };
 		ED2935AD1808C4F6008537F1 /* addphoto.png in Resources */ = {isa = PBXBuildFile; fileRef = ED2935A31808C4F6008537F1 /* addphoto.png */; };
+		ED2935AF1808EA68008537F1 /* noprofile.png in Resources */ = {isa = PBXBuildFile; fileRef = ED2935AE1808EA68008537F1 /* noprofile.png */; };
 		ED81993917F791A400BB9BC7 /* connectClient.m in Sources */ = {isa = PBXBuildFile; fileRef = ED81993817F791A400BB9BC7 /* connectClient.m */; };
 		ED81993C17F798E700BB9BC7 /* AttendingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED81993B17F798E700BB9BC7 /* AttendingViewController.m */; };
 		ED81993E17F79BD000BB9BC7 /* Attending_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED81993D17F79BD000BB9BC7 /* Attending_iPhone.xib */; };
@@ -47,6 +44,16 @@
 		ED94E750180524030079F7A8 /* PhotoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED94E74F180524030079F7A8 /* PhotoVC.xib */; };
 		ED94E75518052ECA0079F7A8 /* wizard1VC.m in Sources */ = {isa = PBXBuildFile; fileRef = ED94E75318052ECA0079F7A8 /* wizard1VC.m */; };
 		ED94E75618052ECA0079F7A8 /* wizard1VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED94E75418052ECA0079F7A8 /* wizard1VC.xib */; };
+		EDA0A70E180B548100C95961 /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA0A70D180B548100C95961 /* AWSS3.framework */; };
+		EDA0A710180B551200C95961 /* AWSRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA0A70F180B551200C95961 /* AWSRuntime.framework */; };
+		EDA0A719180B5A2700C95961 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EDA0A713180B5A2700C95961 /* README.md */; };
+		EDA0A71A180B5A2700C95961 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = EDA0A714180B5A2700C95961 /* release_notes.md */; };
+		EDA0A71B180B5A6C00C95961 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED1B5D281804C3D4005E8F90 /* libz.dylib */; };
+		EDA0A71C180B5ACB00C95961 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA0A712180B5A2700C95961 /* libTestFlight.a */; };
+		EDA0A721180B65D700C95961 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = EDA0A71D180B65D700C95961 /* Icon-Small.png */; };
+		EDA0A722180B65D700C95961 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EDA0A71E180B65D700C95961 /* Icon.png */; };
+		EDA0A723180B65D700C95961 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDA0A71F180B65D700C95961 /* Icon-Small@2x.png */; };
+		EDA0A724180B65D700C95961 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDA0A720180B65D700C95961 /* Icon@2x.png */; };
 		EDF7A1C817F76F2B00875DD8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF7A1C717F76F2B00875DD8 /* UIKit.framework */; };
 		EDF7A1CA17F76F2B00875DD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF7A1C917F76F2B00875DD8 /* Foundation.framework */; };
 		EDF7A1CC17F76F2B00875DD8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF7A1CB17F76F2B00875DD8 /* CoreGraphics.framework */; };
@@ -103,12 +110,6 @@
 		ED1B5D0F1804B415005E8F90 /* Lato-BlaIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlaIta.ttf"; sourceTree = "<group>"; };
 		ED1B5D1A1804BA34005E8F90 /* pink_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pink_button.png; sourceTree = "<group>"; };
 		ED1B5D1C1804BB37005E8F90 /* gray_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gray_button.png; sourceTree = "<group>"; };
-		ED1B5D1F1804C395005E8F90 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
-		ED1B5D201804C395005E8F90 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		ED1B5D211804C395005E8F90 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
-		ED1B5D221804C395005E8F90 /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
-		ED1B5D231804C395005E8F90 /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
-		ED1B5D241804C395005E8F90 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		ED1B5D281804C3D4005E8F90 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		ED2935981808C40C008537F1 /* women2logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = women2logo.png; sourceTree = "<group>"; };
 		ED29359A1808C4F6008537F1 /* attendeelist@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "attendeelist@2x.png"; sourceTree = "<group>"; };
@@ -117,6 +118,7 @@
 		ED2935A11808C4F6008537F1 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		ED2935A21808C4F6008537F1 /* addphoto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addphoto@2x.png"; sourceTree = "<group>"; };
 		ED2935A31808C4F6008537F1 /* addphoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addphoto.png; sourceTree = "<group>"; };
+		ED2935AE1808EA68008537F1 /* noprofile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noprofile.png; sourceTree = "<group>"; };
 		ED81993717F791A400BB9BC7 /* connectClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = connectClient.h; sourceTree = "<group>"; };
 		ED81993817F791A400BB9BC7 /* connectClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = connectClient.m; sourceTree = "<group>"; };
 		ED81993A17F798E700BB9BC7 /* AttendingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendingViewController.h; sourceTree = "<group>"; };
@@ -128,6 +130,18 @@
 		ED94E75218052ECA0079F7A8 /* wizard1VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wizard1VC.h; sourceTree = "<group>"; };
 		ED94E75318052ECA0079F7A8 /* wizard1VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wizard1VC.m; sourceTree = "<group>"; };
 		ED94E75418052ECA0079F7A8 /* wizard1VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = wizard1VC.xib; path = w2connect/wizard1VC.xib; sourceTree = "<group>"; };
+		EDA0A70D180B548100C95961 /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSS3.framework; sourceTree = "<group>"; };
+		EDA0A70F180B551200C95961 /* AWSRuntime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSRuntime.framework; sourceTree = "<group>"; };
+		EDA0A712180B5A2700C95961 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		EDA0A713180B5A2700C95961 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		EDA0A714180B5A2700C95961 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		EDA0A715180B5A2700C95961 /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
+		EDA0A716180B5A2700C95961 /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
+		EDA0A717180B5A2700C95961 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		EDA0A71D180B65D700C95961 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		EDA0A71E180B65D700C95961 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		EDA0A71F180B65D700C95961 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		EDA0A720180B65D700C95961 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		EDF7A1C417F76F2B00875DD8 /* connector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = connector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF7A1C717F76F2B00875DD8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EDF7A1C917F76F2B00875DD8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -157,12 +171,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED1B5D291804C3D4005E8F90 /* libz.dylib in Frameworks */,
+				EDA0A71C180B5ACB00C95961 /* libTestFlight.a in Frameworks */,
+				EDA0A71B180B5A6C00C95961 /* libz.dylib in Frameworks */,
 				EDF7A1C817F76F2B00875DD8 /* UIKit.framework in Frameworks */,
 				EDF7A1CA17F76F2B00875DD8 /* Foundation.framework in Frameworks */,
+				EDA0A70E180B548100C95961 /* AWSS3.framework in Frameworks */,
 				EDF7A1CC17F76F2B00875DD8 /* CoreGraphics.framework in Frameworks */,
 				D23F8FE8476E46B78251D359 /* libPods.a in Frameworks */,
-				ED1B5D251804C395005E8F90 /* libTestFlight.a in Frameworks */,
+				EDA0A710180B551200C95961 /* AWSRuntime.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +207,11 @@
 		ED1B5D021804633F005E8F90 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EDA0A71D180B65D700C95961 /* Icon-Small.png */,
+				EDA0A71E180B65D700C95961 /* Icon.png */,
+				EDA0A71F180B65D700C95961 /* Icon-Small@2x.png */,
+				EDA0A720180B65D700C95961 /* Icon@2x.png */,
+				ED2935AE1808EA68008537F1 /* noprofile.png */,
 				ED29359A1808C4F6008537F1 /* attendeelist@2x.png */,
 				ED29359B1808C4F6008537F1 /* attendeelist.png */,
 				8B32F25E180B463200AD6361 /* photo.png */,
@@ -203,8 +224,8 @@
 				ED2935A31808C4F6008537F1 /* addphoto.png */,
 				ED2935981808C40C008537F1 /* women2logo.png */,
 				ED1B5D1C1804BB37005E8F90 /* gray_button.png */,
-				ED1B5CFA180354A3005E8F90 /* SearchVC.xib */,
 				ED1B5D1A1804BA34005E8F90 /* pink_button.png */,
+				ED1B5CFA180354A3005E8F90 /* SearchVC.xib */,
 				EDF7A21B17F77AF900875DD8 /* LoginView_iPhone.xib */,
 				ED81993D17F79BD000BB9BC7 /* Attending_iPhone.xib */,
 				ED1B5CF518035493005E8F90 /* ProfileVC.xib */,
@@ -253,19 +274,6 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
-		ED1B5D1E1804C394005E8F90 /* TestFlightSDK2.0.2 */ = {
-			isa = PBXGroup;
-			children = (
-				ED1B5D1F1804C395005E8F90 /* libTestFlight.a */,
-				ED1B5D201804C395005E8F90 /* README.md */,
-				ED1B5D211804C395005E8F90 /* release_notes.md */,
-				ED1B5D221804C395005E8F90 /* TestFlight+AsyncLogging.h */,
-				ED1B5D231804C395005E8F90 /* TestFlight+ManualSessions.h */,
-				ED1B5D241804C395005E8F90 /* TestFlight.h */,
-			);
-			path = TestFlightSDK2.0.2;
-			sourceTree = "<group>";
-		};
 		ED54A30A17F78A47009FB9D6 /* services */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,11 +283,24 @@
 			name = services;
 			sourceTree = "<group>";
 		};
+		EDA0A711180B5A2700C95961 /* TestFlightSDK2.0.2 */ = {
+			isa = PBXGroup;
+			children = (
+				EDA0A712180B5A2700C95961 /* libTestFlight.a */,
+				EDA0A713180B5A2700C95961 /* README.md */,
+				EDA0A714180B5A2700C95961 /* release_notes.md */,
+				EDA0A715180B5A2700C95961 /* TestFlight+AsyncLogging.h */,
+				EDA0A716180B5A2700C95961 /* TestFlight+ManualSessions.h */,
+				EDA0A717180B5A2700C95961 /* TestFlight.h */,
+			);
+			path = TestFlightSDK2.0.2;
+			sourceTree = "<group>";
+		};
 		EDF7A1BB17F76F2B00875DD8 = {
 			isa = PBXGroup;
 			children = (
+				EDA0A711180B5A2700C95961 /* TestFlightSDK2.0.2 */,
 				ED1B5D281804C3D4005E8F90 /* libz.dylib */,
-				ED1B5D1E1804C394005E8F90 /* TestFlightSDK2.0.2 */,
 				EDF7A1CD17F76F2B00875DD8 /* w2connect */,
 				EDF7A20517F76F2C00875DD8 /* w2connectTests */,
 				EDF7A1C617F76F2B00875DD8 /* Frameworks */,
@@ -300,6 +321,8 @@
 		EDF7A1C617F76F2B00875DD8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EDA0A70F180B551200C95961 /* AWSRuntime.framework */,
+				EDA0A70D180B548100C95961 /* AWSS3.framework */,
 				EDF7A1C717F76F2B00875DD8 /* UIKit.framework */,
 				EDF7A1C917F76F2B00875DD8 /* Foundation.framework */,
 				EDF7A1CB17F76F2B00875DD8 /* CoreGraphics.framework */,
@@ -434,6 +457,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDA0A71A180B5A2700C95961 /* release_notes.md in Resources */,
 				ED2935AA1808C4F6008537F1 /* search@2x.png in Resources */,
 				EDF7A1D217F76F2B00875DD8 /* InfoPlist.strings in Resources */,
 				EDF7A1DA17F76F2B00875DD8 /* Default.png in Resources */,
@@ -442,15 +466,29 @@
 				EDF7A21C17F77AF900875DD8 /* LoginView_iPhone.xib in Resources */,
 				ED2935A51808C4F6008537F1 /* attendeelist.png in Resources */,
 				ED2935AB1808C4F6008537F1 /* search.png in Resources */,
+
+
+				EDA0A724180B65D700C95961 /* Icon@2x.png in Resources */,
+				ED2935A71808C4F6008537F1 /* photo@2x.png in Resources */,
+				EDA0A722180B65D700C95961 /* Icon.png in Resources */,
+
 				ED2935AC1808C4F6008537F1 /* addphoto@2x.png in Resources */,
 				ED81993E17F79BD000BB9BC7 /* Attending_iPhone.xib in Resources */,
 				8B32F264180B463200AD6361 /* profile.png in Resources */,
 				ED1B5CF718035493005E8F90 /* ProfileVC.xib in Resources */,
 				ED1B5CFC180354A3005E8F90 /* SearchVC.xib in Resources */,
 				ED1B5D101804B415005E8F90 /* Lato-Bol.ttf in Resources */,
+
 				8B32F262180B463200AD6361 /* photo.png in Resources */,
+
+
+				EDA0A721180B65D700C95961 /* Icon-Small.png in Resources */,
 				ED1B5D111804B415005E8F90 /* Lato-Hai.ttf in Resources */,
+				EDA0A723180B65D700C95961 /* Icon-Small@2x.png in Resources */,
+
+
 				ED1B5D121804B415005E8F90 /* Lato-BolIta.ttf in Resources */,
+				EDA0A719180B5A2700C95961 /* README.md in Resources */,
 				ED1B5D131804B415005E8F90 /* Lato-Reg.ttf in Resources */,
 				ED2935A41808C4F6008537F1 /* attendeelist@2x.png in Resources */,
 				ED2935991808C40D008537F1 /* women2logo.png in Resources */,
@@ -458,14 +496,13 @@
 				ED1B5D151804B415005E8F90 /* Lato-RegIta.ttf in Resources */,
 				ED1B5D161804B415005E8F90 /* Lato-Lig.ttf in Resources */,
 				ED2935AD1808C4F6008537F1 /* addphoto.png in Resources */,
+				ED2935AF1808EA68008537F1 /* noprofile.png in Resources */,
 				ED1B5D171804B415005E8F90 /* Lato-HaiIta.ttf in Resources */,
 				8B32F265180B463200AD6361 /* profile@2x.png in Resources */,
 				ED1B5D181804B415005E8F90 /* Lato-LigIta.ttf in Resources */,
 				ED1B5D191804B415005E8F90 /* Lato-BlaIta.ttf in Resources */,
 				ED1B5D1B1804BA34005E8F90 /* pink_button.png in Resources */,
 				ED1B5D1D1804BB37005E8F90 /* gray_button.png in Resources */,
-				ED1B5D261804C395005E8F90 /* README.md in Resources */,
-				ED1B5D271804C395005E8F90 /* release_notes.md in Resources */,
 				ED94E750180524030079F7A8 /* PhotoVC.xib in Resources */,
 				8B32F263180B463200AD6361 /* photo@2x.png in Resources */,
 				ED94E75618052ECA0079F7A8 /* wizard1VC.xib in Resources */,
@@ -651,13 +688,17 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/banane/dev/iOS/w2connect,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "w2connect/connector-Prefix.pch";
 				INFOPLIST_FILE = "w2connect/connector-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/TestFlightSDK2.0.2\"",
+					/Users/banane/dev/iOS/w2connect/TestFlightSDK2.0.2,
 				);
 				PRODUCT_NAME = connector;
 				PROVISIONING_PROFILE = "";
@@ -670,18 +711,22 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 140E2582299F40BCBFE90CA2 /* Pods.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/banane/dev/iOS/w2connect,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "w2connect/connector-Prefix.pch";
 				INFOPLIST_FILE = "w2connect/connector-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/TestFlightSDK2.0.2\"",
+					/Users/banane/dev/iOS/w2connect/TestFlightSDK2.0.2,
 				);
 				PRODUCT_NAME = connector;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "528C2E12-0F05-415A-BDFB-7D27592A2A3B";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
