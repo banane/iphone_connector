@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D5C6A1DA-041C-4256-906D-7B462CBF47F3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>w2connect</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EEF0F145-4F49-4D63-8A0D-3395165C8F8E</key>
+		<string>ssh://github.com/banane/iphone_connector.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>w2connect.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EEF0F145-4F49-4D63-8A0D-3395165C8F8E</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/banane/iphone_connector.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EEF0F145-4F49-4D63-8A0D-3395165C8F8E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EEF0F145-4F49-4D63-8A0D-3395165C8F8E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iphone_connector</string>
+		</dict>
+	</array>
+</dict>
+</plist>
