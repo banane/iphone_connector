@@ -19,9 +19,11 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     
+    
     LoginViewController *loginVC = [[LoginViewController alloc] initWithNibName:@"LoginView_iPhone" bundle:nil];
     
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:loginVC];
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
     [self.window addSubview:self.navigationController.view];
     self.navigationController.navigationBar.hidden = YES;
 //    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
@@ -37,6 +39,8 @@
     
 }
 
+
+
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
     [[User instance] saveToDefaults];
@@ -50,6 +54,9 @@
 {
     [[User instance] loadFromDefaults];
     [[User instance] incrementVisit];
+    [[NSNotificationCenter defaultCenter]
+     postNotificationName:@"UpsellNotification"
+     object:self];
     NSLog(@"%d number of times visited", [[User instance] numTimesLogin]);
    
 }
@@ -58,6 +65,7 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
 
 
 @end

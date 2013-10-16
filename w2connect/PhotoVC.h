@@ -25,5 +25,6 @@
 -(void) uploadImageToAWS:chosenImage;
 -(void)postToServer:(NSString *)profileUrlString;
 -(UIImage *) reduceSize:(UIImage *) image;
+-(bool) fromWizard;
 
 @end

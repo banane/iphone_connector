@@ -13,7 +13,7 @@
 #import "User.h"
 
 @implementation AttendingViewController
-@synthesize webView;
+@synthesize webView, alertView;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -25,6 +25,8 @@
     
     return self;
 }
+
+
 
 - (void)viewDidLoad
 {
@@ -51,6 +53,21 @@
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     [self.webView loadRequest:request];
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receiveUpsellNotification:)
+                                                 name:@"UpsellNotification"
+                                               object:nil];
+}
+- (void) receiveUpsellNotification:(NSNotification *) notification
+{
+   
+    
+    if ([[notification name] isEqualToString:@"UpsellNotification"]){
+        NSLog (@"Successfully received the upsell notification!");
+        [self checkForUpsell];
+    }
+    
 }
 
 -(void)viewProfile:(id)sender{
@@ -64,7 +81,41 @@
     [[self navigationController] pushViewController:searchVC animated:NO];
 
 }
+
+- (void)displayUpsellAlert {
+    self.alertView = [[UIAlertView alloc] initWithTitle:@"Join Women2.0"
+                                                message:@"Find out about the perks of membershiip"
+                                               delegate:self
+                                      cancelButtonTitle:@"Cancel"
+                                      otherButtonTitles:@"OK", nil];
+    [self.alertView show];
+}
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
     
+    NSLog(@"in did click");
+    
+    if(buttonIndex == 1){
+        // do flurry notification
+        NSString* launchUrl = @"http://www.women2.com/membership";
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString: launchUrl]];
+        NSLog(@"in buttonindex 1");
+    } else {
+        NSLog(@"in buttonindex 0");
+        // do flurry notification
+    }
+}
+
+-(void)checkForUpsell{
+    NSLog(@"check for upsell");
+    if([[User instance] numTimesLogin] == 2){
+        // launch alert
+        NSLog(@"valid for upsell- %d", [[User instance] numTimesLogin]);
+        [self displayUpsellAlert];
+    }
+}
+
+
 
 
 @end

@@ -9,14 +9,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AttendingViewController : UIViewController <UIWebViewDelegate> {
+@interface AttendingViewController : UIViewController <UIWebViewDelegate, UIAlertViewDelegate> {
     UIWebView *webView;
+    UIAlertView *alertView;
 
 }
 
 @property IBOutlet UIWebView *webView;
+@property UIAlertView *alertView;
 -(void)viewProfile:(id)sender;
 
 -(void)viewSearch:(id)sender;
+-(void)checkForUpsell;
+-(void)displayUpsellAlert;
+
 
 @end

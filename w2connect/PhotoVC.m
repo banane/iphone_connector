@@ -34,17 +34,35 @@
 
 - (void)viewDidLoad{
     
+    
     self.navigationController.navigationBar.hidden = NO;
     self.navigationItem.hidesBackButton = YES;
     
-    UIBarButtonItem *profileBtn = [[UIBarButtonItem alloc]
-                                     initWithImage:[UIImage imageNamed:@"profile"]
-                                     style:UIBarButtonItemStyleBordered
-                                     target:self
-                                     action:@selector(loadProfile)];
-    self.navigationItem.leftBarButtonItem = profileBtn;
+    
+    
+    if(![self fromWizard]){
+        UIBarButtonItem *profileBtn = [[UIBarButtonItem alloc]
+                                       initWithImage:[UIImage imageNamed:@"profile"]
+                                       style:UIBarButtonItemStyleBordered
+                                       target:self
+                                       action:@selector(loadProfile)];
+        self.navigationItem.leftBarButtonItem = profileBtn;
+    }
+
+    
+   
      [super viewDidLoad];
    
+}
+
+-(bool) fromWizard {
+    bool returnValue = NO;
+    for( UIViewController* aView in [[self navigationController] viewControllers]){
+        if([aView isKindOfClass:[wizard1VC class]]){
+            returnValue = YES;
+        }
+    }
+    return returnValue;
 }
 
 -(IBAction)takePhoto:(id)sender{
@@ -131,15 +149,11 @@
 }
 
 -(void)loadProfile{
-    bool fromWizard = NO;
-    for( UIViewController* aView in [[self navigationController] viewControllers]){
-        if([aView isKindOfClass:[wizard1VC class]]){
-            ProfileVC *pvc = [[ProfileVC alloc] initWithNibName:@"ProfileVC" bundle:nil];
-            [[self navigationController] pushViewController:pvc animated:NO];
-            fromWizard = YES;
-        }
-    }
-    if(!fromWizard){
+   
+    if([self fromWizard]){
+        ProfileVC *pvc = [[ProfileVC alloc] initWithNibName:@"ProfileVC" bundle:nil];
+        [[self navigationController] pushViewController:pvc animated:NO];
+    } else {
         [[self navigationController] popViewControllerAnimated:NO];
     }
 }
