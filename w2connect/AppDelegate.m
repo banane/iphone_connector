@@ -13,16 +13,28 @@
 
 @implementation AppDelegate
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSLog(@"in app launch");
+    [[User instance] loadFromDefaults];
+    
+
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     
+    if([self isUserTokenValid] && ([[User instance] UID] > 0)){  // has logged in before and is valid
+
+        AttendingViewController *attVC = [[AttendingViewController alloc] initWithNibName:@"Attending_iPhone" bundle:nil];
+        self.navigationController = [[UINavigationController alloc] initWithRootViewController:attVC];
     
-    LoginViewController *loginVC = [[LoginViewController alloc] initWithNibName:@"LoginView_iPhone" bundle:nil];
-    
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:loginVC];
+    } else {
+        LoginViewController *loginVC = [[LoginViewController alloc] initWithNibName:@"LoginView_iPhone" bundle:nil];
+        
+        self.navigationController = [[UINavigationController alloc] initWithRootViewController:loginVC];
+    }
+        
     self.navigationController.navigationBar.tintColor = [UIColor blackColor];
     [self.window addSubview:self.navigationController.view];
     self.navigationController.navigationBar.hidden = YES;
@@ -39,7 +51,27 @@
     
 }
 
-
+- (bool)isUserTokenValid{
+    bool result_value = NO;
+    NSTimeInterval secondsPerDay = 24 * 60 * 60;
+    
+    //Calculates the date of tomorrow:
+    NSDate *expiresDate = [[[User instance] lastLoginDate] addTimeInterval: (secondsPerDay+secondsPerDay)];
+    NSDate *today = [NSDate date];
+    NSComparisonResult result = [expiresDate compare:today];
+    
+    if(result==NSOrderedAscending){
+        NSLog(@"Date1 is in the future");
+        result_value = YES;
+    } else if(result==NSOrderedDescending) {
+        NSLog(@"Date1 is in the past");
+        result_value = NO;
+    } else {
+        result_value = NO;
+        NSLog(@"Both dates are the same");
+    }
+    return result_value;
+}
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
@@ -52,7 +84,8 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    [[User instance] loadFromDefaults];
+    NSLog(@"in app active");
+//    [[User instance] loadFromDefaults];
     [[User instance] incrementVisit];
     [[NSNotificationCenter defaultCenter]
      postNotificationName:@"UpsellNotification"

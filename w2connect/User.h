@@ -14,6 +14,7 @@
     int numTimesLogin;
     NSString *profilePhoto;
     NSString *token;
+    NSDate *lastLoginDate;
 }
 
 @property (nonatomic, strong) NSString *UID;
@@ -21,6 +22,7 @@
 @property (nonatomic, strong) NSString *profilePhoto;
 @property (nonatomic, strong) NSString *token;
 @property int numTimesLogin;
+@property (nonatomic, strong) NSDate *lastLoginDate;
 
 
 + (User *) instance;

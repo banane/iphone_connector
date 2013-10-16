@@ -11,6 +11,7 @@
 #import "Constants.h"
 #import "PhotoVC.h"
 #import "AttendingViewController.h"
+#include "wizard1VC.h"
 
 @interface ProfileVC ()
 
@@ -63,7 +64,9 @@
 
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
 }
+
 
 -(void)launchPhoto:(id)sender{
     PhotoVC *photoVC = [[PhotoVC alloc] initWithNibName:@"PhotoVC" bundle:nil];

@@ -10,10 +10,13 @@
 #import "LoginViewController.h"
 #import "AttendingViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate> {
+    bool skipLogin;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UINavigationController *navigationController;
 
+- (bool)isUserTokenValid;
 
 @end

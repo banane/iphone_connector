@@ -151,11 +151,29 @@
 -(void)loadProfile{
    
     if([self fromWizard]){
+        [self removeWizardFromVCStack];
         ProfileVC *pvc = [[ProfileVC alloc] initWithNibName:@"ProfileVC" bundle:nil];
         [[self navigationController] pushViewController:pvc animated:NO];
     } else {
         [[self navigationController] popViewControllerAnimated:NO];
     }
+}
+
+-(void)removeWizardFromVCStack{
+    int counter = 0;
+    int index;
+    for( UIViewController* aView in [[self navigationController] viewControllers]){
+        if([aView isKindOfClass:[wizard1VC class]]){
+            index= counter;
+        }
+        counter += 1;
+    }
+    
+    NSMutableArray *navigationArray = [[NSMutableArray alloc] initWithArray: self.navigationController.viewControllers];
+    
+    // [navigationArray removeAllObjects];    // This is just for remove all view controller from navigation stack.
+    [navigationArray removeObjectAtIndex: index];  // You can pass your index here
+    self.navigationController.viewControllers = navigationArray;
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
