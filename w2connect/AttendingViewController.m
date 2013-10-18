@@ -109,11 +109,12 @@
 }
 
 - (void)displayUpsellAlert {
+    // #TODO don't display for members
     self.alertView = [[UIAlertView alloc] initWithTitle:@"Join Women2.0"
-                                                message:@"Find out about the perks of membershiip"
+                                                message:@"Get a Women 2.0 Subscription for exclusive events, discounts and more!"
                                                delegate:self
-                                      cancelButtonTitle:@"Cancel"
-                                      otherButtonTitles:@"OK", nil];
+                                      cancelButtonTitle:@"Not Now"
+                                      otherButtonTitles:@"Learn More", nil];
     [self.alertView show];
 }
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex

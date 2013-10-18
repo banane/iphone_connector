@@ -50,7 +50,7 @@
                                        action:@selector(backToProfile:)];
         self.navigationItem.rightBarButtonItem = profileBtn;
     }
-
+    [self.tabBarController.tabBar setHidden:YES];
     
    
      [super viewDidLoad];
