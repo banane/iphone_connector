@@ -23,21 +23,15 @@
     if (self) {
         // Custom initialization
         self.title = @"Search";
+        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Search" image:[UIImage imageNamed:@"search"] tag:1];
+        
     }
     return self;
 }
 
 - (void)viewDidLoad
 {
-    self.navigationController.navigationBar.hidden = NO;
-    self.navigationItem.hidesBackButton = YES;
-    
-    UIBarButtonItem *attendingBtn = [[UIBarButtonItem alloc]
-                                     initWithImage:[UIImage imageNamed:@"attendeelist"]
-                                 style:UIBarButtonItemStyleBordered
-                                 target:self
-                                 action:@selector(backToAttending:)];
-    self.navigationItem.leftBarButtonItem = attendingBtn;
+
     
     NSString *stringUrl = [NSString stringWithFormat:@"%@/api/v1/search?auth_token=%@", kAPIBaseURLString, [[User instance] token]];
     NSURL *url = [[NSURL alloc] initWithString:stringUrl];

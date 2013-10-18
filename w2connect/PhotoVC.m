@@ -78,7 +78,7 @@
 -(void)uploadImageToAWS:(UIImage *)image {
     
     int randomNum = arc4random() % 10000;
-    NSString *imageKeyName = [NSString stringWithFormat:@"profile_%@_%d.png",[[User instance] UID], randomNum];
+    NSString *imageKeyName = [NSString stringWithFormat:@"profile_%d_%d.png",[[User instance] UID], randomNum];
     NSString *imageBucketName = @"mobileprofiles";
 
     
@@ -107,7 +107,7 @@
 - (void)postToServer:(NSString *)profileUrlString{
     NSDictionary *params = [[NSDictionary alloc] initWithObjectsAndKeys:profileUrlString, @"profile_photo",[[User instance] token], @"auth_token", nil];
     connectClient *client = [connectClient sharedClient];
-    NSString *path = [NSString stringWithFormat:@"/api/v1/people/%@.json", [[User instance] UID]];
+    NSString *path = [NSString stringWithFormat:@"/api/v1/people/%d.json", [[User instance] UID]];
     
     NSURLRequest* request = [client requestWithMethod:@"PUT" path:path parameters:params];
     

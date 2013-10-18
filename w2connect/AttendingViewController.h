@@ -22,6 +22,7 @@
 -(void)viewSearch:(id)sender;
 -(void)checkForUpsell;
 -(void)displayUpsellAlert;
+-(void)drawWebView;
 
 
 @end

@@ -37,6 +37,7 @@
 }
 
 -(IBAction)viewPhoto:(id)sender{
+// #TODO figure out how to load up photo here
     PhotoVC *pvc = [[PhotoVC alloc] initWithNibName:@"PhotoVC" bundle:nil];
     [[self navigationController] pushViewController:pvc animated:NO];
 }

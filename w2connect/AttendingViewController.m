@@ -11,6 +11,8 @@
 #import "SearchVC.h"
 #import "Constants.h"
 #import "User.h"
+#import "LoginViewController.h"
+#import "AppDelegate.h"
 
 @implementation AttendingViewController
 @synthesize webView, alertView;
@@ -20,44 +22,47 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Women 2.0", @"Women 2.0");
+        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Attending" image:[UIImage imageNamed:@"attendeelist"] tag:1];
+        
+
     }
     
     return self;
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [self checkUserLogin];
+    
+    [self drawWebView];
+}
+
+-(void)checkUserLogin{
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    if([appDelegate shouldUserLogin]){
+        LoginViewController *loginVC = [[LoginViewController alloc] initWithNibName:@"LoginView_iPhone" bundle:nil];
+        [self presentModalViewController:loginVC animated:YES];
+    }
+}
 
 
 - (void)viewDidLoad
 {
-    self.navigationController.navigationBar.hidden = NO;
-    self.navigationItem.hidesBackButton = YES;
-    
-    UIBarButtonItem *profileBtn = [[UIBarButtonItem alloc]
-                                initWithImage:[UIImage imageNamed:@"profile"]
-                                style:UIBarButtonItemStyleBordered
-                                target:self
-                                action:@selector(viewProfile:)
-                                ];
-    self.navigationItem.leftBarButtonItem = profileBtn;
-    
-    UIBarButtonItem *searchBtn = [[UIBarButtonItem alloc]
-                                  initWithImage:[UIImage imageNamed:@"search"]
-                                  style:UIBarButtonItemStyleBordered
-                                  target:self
-                                  action:@selector(viewSearch:)];
-    self.navigationItem.rightBarButtonItem = searchBtn;
-    
-    NSString *stringUrl = [NSString stringWithFormat:@"%@/api/v1/people?auth_token=%@",kAPIBaseURLString,[[User instance] token]];
-    NSURL *url = [[NSURL alloc] initWithString:stringUrl];
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
-    [self.webView loadRequest:request];
+    [self drawWebView];
     [super viewDidLoad];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(receiveUpsellNotification:)
                                                  name:@"UpsellNotification"
                                                object:nil];
+}
+-(void)drawWebView{
+    if([[User instance] isValidToken]){
+        
+        NSString *stringUrl = [NSString stringWithFormat:@"%@/api/v1/people?auth_token=%@",kAPIBaseURLString,[[User instance] token]];
+        NSURL *url = [[NSURL alloc] initWithString:stringUrl];
+        NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+        [self.webView loadRequest:request];
+    }
 }
 - (void) receiveUpsellNotification:(NSNotification *) notification
 {
@@ -97,7 +102,7 @@
     
     if(buttonIndex == 1){
         // do flurry notification
-        NSString* launchUrl = @"http://www.women2.com/membership";
+        NSString* launchUrl = @"http://www.formstack.com/forms/?1508882-wO8PffbV8E";
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString: launchUrl]];
         NSLog(@"in buttonindex 1");
     } else {

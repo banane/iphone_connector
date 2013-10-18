@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface User : NSObject {
-    NSString *UID;
+    int UID;
     NSString *email;
     int numTimesLogin;
     NSString *profilePhoto;
@@ -17,7 +17,7 @@
     NSDate *lastLoginDate;
 }
 
-@property (nonatomic, strong) NSString *UID;
+@property int UID;
 @property (nonatomic, strong) NSString *email;
 @property (nonatomic, strong) NSString *profilePhoto;
 @property (nonatomic, strong) NSString *token;
@@ -30,6 +30,7 @@
 - (void) loadFromDefaults;
 - (void) saveToDefaults;
 - (void) incrementVisit;
+- (bool) isValidToken;
 
 
 @end

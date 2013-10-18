@@ -9,8 +9,8 @@
 #ifndef w2connect_Constants_h
 #define w2connect_Constants_h
 
-#define kAPIBaseURLString @"http://ec2-54-215-227-19.us-west-1.compute.amazonaws.com:3000"
-//#define kAPIBaseURLString @"http://localhost:3000"
+//#define kAPIBaseURLString @"http://ec2-54-215-227-19.us-west-1.compute.amazonaws.com:3000"
+#define kAPIBaseURLString @"http://localhost:3000"
 //#define kAPIBaseURLString @"http://10.0.1.155:3000"
 
 

@@ -28,7 +28,7 @@ static User * _instance = nil;
 {
     self = [super init];
     
-    self.UID = @"";
+    self.UID = 0;
     self.email = @"";
     self.numTimesLogin = 0;
     self.profilePhoto = @"";
@@ -45,10 +45,18 @@ static User * _instance = nil;
 
 -(void)saveUser:(NSDictionary *)params email:(NSString *)theEmail{
     self.email = theEmail;
-    self.UID = params[@"id"];
+    self.UID = [params[@"id"] intValue];
     self.profilePhoto = params[@"profile_photo"];
     self.token = params[@"token"];
     
+}
+
+-(bool)isValidToken{
+    if([self.token length] > 0){
+        return YES;
+    } else {
+        return NO;
+    }
 }
 
 -(void)loadFromDefaults{

@@ -7,16 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LoginViewController.h"
-#import "AttendingViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate> {
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate> {
     bool skipLogin;
 }
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) UINavigationController *navigationController;
+//@property (strong, nonatomic) UINavigationController *navigationController;
+@property (strong, nonatomic) UITabBarController *tabCtrl;
 
 - (bool)isUserTokenValid;
+- (bool)shouldUserLogin;
+
 
 @end

@@ -61,6 +61,7 @@
 }
 
 - (IBAction)login:(id)sender{
+     [self.email resignFirstResponder];
     
     NSDictionary *params = [[NSDictionary alloc] initWithObjectsAndKeys:self.email.text, @"email", nil];
     connectClient *client = [connectClient sharedClient];
@@ -91,28 +92,47 @@
 
 - (IBAction)viewEventListing:(id)sender{
 
-        // access women2 site in safari
+    connectClient *client = [connectClient sharedClient];
+    NSString *path = @"/api/v1/logins/event_info.json";
+    
+    NSURLRequest* request = [client requestWithMethod:@"GET" path:path parameters:nil];
+    
+    AFJSONRequestOperation* operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        // 6 - Request succeeded block
+        NSLog(@"response from json: %@", JSON);
+        NSDictionary *params = JSON;
+        
+        NSString *urlString = params[@"link"];
+    
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+        
+        
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        self.errors.text = @"Event not found.";
+        NSLog(@"failure to get event link");
+        // 7 - Request failed block
+    }];
+    // 8 - Start request
+    [operation start];
+    
+    
+    
+    
 }
 
 -(void)determineNextView{
    if([[[User instance] profilePhoto] length] == 0){
         [self startWizard];
     } else {
-        [self loadAttending];
+        [self dismissModalViewControllerAnimated:YES];
     }
 }
 
-- (void)loadAttending{
-    
-    /* check if first time, route to wizard, else: */
-    AttendingViewController *attVC = [[AttendingViewController alloc] initWithNibName:@"Attending_iPhone" bundle:nil];
-    [[self navigationController] pushViewController:attVC animated:NO];
-
-    
-}
 -(void)startWizard{
+    [self dismissModalViewControllerAnimated:NO];
+    
     wizard1VC *wvc = [[wizard1VC alloc] initWithNibName:@"wizard1VC" bundle:nil];
-    [[self navigationController] pushViewController:wvc animated:NO];
+    [[self tabBarController] presentModalViewController:wvc animated:YES];
 }
 
 

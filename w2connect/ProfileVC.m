@@ -26,6 +26,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Profile" image:[UIImage imageNamed:@"profile"] tag:0];
+
     }
     self.title = @"Profile";
     return self;
@@ -33,7 +35,7 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [webView reload];
+    [self drawWebView];
 }
 
 - (void)viewDidLoad
@@ -49,22 +51,21 @@
                                    action:@selector(launchPhoto:)];
     self.navigationItem.leftBarButtonItem = photoBtn;
     
-    UIBarButtonItem *backToAttending = [[UIBarButtonItem alloc]
-                                  initWithImage:[UIImage imageNamed:@"attendeelist"]
-                                  style:UIBarButtonItemStyleBordered
-                                  target:self
-                                  action:@selector(backToAttending:)];
-    self.navigationItem.rightBarButtonItem = backToAttending;
-    
-    /* get uid from app */
-    NSString *stringUrl = [NSString stringWithFormat:@"%@/api/v1/people/%@/edit?auth_token=%@",kAPIBaseURLString, [[User instance] UID], [[User instance] token]];
-    NSURL *url = [[NSURL alloc] initWithString:stringUrl];
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
-    [self.webView loadRequest:request];
 
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+}
+
+
+-(void)drawWebView{
+    if([[User instance] isValidToken]){
+        NSString *stringUrl = [NSString stringWithFormat:@"%@/api/v1/people/%d/edit?auth_token=%@",kAPIBaseURLString, [[User instance] UID], [[User instance] token]];
+        NSURL *url = [[NSURL alloc] initWithString:stringUrl];
+        NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+        [self.webView loadRequest:request];
+    }
+
 }
 
 
@@ -74,16 +75,7 @@
     
 }
 
--(void)backToAttending:(id)sender{
-    // check if attending is next
-    AttendingViewController *attVC = [[AttendingViewController alloc] initWithNibName:@"Attending_iPhone" bundle:nil];
-    if([[[self navigationController] viewControllers] containsObject:attVC]){
-        [[self navigationController] popViewControllerAnimated:NO];
-    } else {
-        [[self navigationController] pushViewController:attVC animated:NO];
-    }
 
-}
 
 - (void)didReceiveMemoryWarning
 {
