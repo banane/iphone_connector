@@ -46,7 +46,7 @@
                                        style:UIBarButtonItemStyleBordered
                                        target:self
                                        action:@selector(loadProfile)];
-        self.navigationItem.leftBarButtonItem = profileBtn;
+        self.navigationItem.rightBarButtonItem = profileBtn;
     }
 
     

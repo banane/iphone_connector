@@ -30,14 +30,17 @@
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     
     AttendingViewController *attVC = [[AttendingViewController alloc] initWithNibName:@"Attending_iPhone" bundle:nil];
+
     ProfileVC *pVC = [[ProfileVC alloc] initWithNibName:@"ProfileVC" bundle:nil];
+
     SearchVC *sVC = [[SearchVC alloc] initWithNibName:@"SearchVC" bundle:nil];
     sVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Search" image:[UIImage imageNamed:@"search"] tag:2];
     
+    UINavigationController *pNavCtrl = [[UINavigationController alloc] initWithRootViewController:pVC];
  
     self.window.rootViewController = self.tabCtrl;
     
-    self.tabCtrl.viewControllers = [[NSArray alloc] initWithObjects:pVC, attVC, sVC, nil];
+    self.tabCtrl.viewControllers = [[NSArray alloc] initWithObjects:pNavCtrl, attVC, sVC, nil];
     self.tabCtrl.selectedIndex = 1;
     
     [TestFlight takeOff:@"75456710-2e74-46c0-a034-57293f61079e"];
