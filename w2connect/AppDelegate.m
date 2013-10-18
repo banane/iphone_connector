@@ -23,6 +23,9 @@
 {
     NSLog(@"in app launch");
     [[User instance] loadFromDefaults];
+    
+    NSLog(@"token: %@", [[User instance] token]);
+    
     self.tabCtrl = [[UITabBarController alloc] initWithNibName:nil bundle:nil];
     self.tabCtrl.delegate = self;
 
@@ -34,7 +37,6 @@
     ProfileVC *pVC = [[ProfileVC alloc] initWithNibName:@"ProfileVC" bundle:nil];
 
     SearchVC *sVC = [[SearchVC alloc] initWithNibName:@"SearchVC" bundle:nil];
-    sVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Search" image:[UIImage imageNamed:@"search"] tag:2];
     
     UINavigationController *pNavCtrl = [[UINavigationController alloc] initWithRootViewController:pVC];
  
@@ -56,27 +58,7 @@
     
 }
 
-- (bool)isUserTokenValid{
-    bool result_value = NO;
-    NSTimeInterval secondsPerDay = 24 * 60 * 60;
-    
-    //Calculates the date of tomorrow:
-    NSDate *expiresDate = [[[User instance] lastLoginDate] addTimeInterval: (secondsPerDay+secondsPerDay)];
-    NSDate *today = [NSDate date];
-    NSComparisonResult result = [expiresDate compare:today];
-    
-    if(result==NSOrderedAscending){
-        NSLog(@"Date1 is in the future");
-        result_value = YES;
-    } else if(result==NSOrderedDescending) {
-        NSLog(@"Date1 is in the past");
-        result_value = NO;
-    } else {
-        result_value = NO;
-        NSLog(@"Both dates are the same");
-    }
-    return result_value;
-}
+
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
@@ -85,23 +67,16 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
+     [[User instance] loadFromDefaults];
+     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
--(bool)shouldUserLogin{
-    int myUID = [[User instance] UID];
-    
- //   if(([self isUserTokenValid]) && ([[[User instance] UID] length] > 0 )){
-    if(myUID > 0){
-        return NO;
-    } else {
-        return YES;
-    }
-}
+
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     NSLog(@"in app active");
-//    [[User instance] loadFromDefaults];
+
     [[User instance] incrementVisit];
     [[NSNotificationCenter defaultCenter]
      postNotificationName:@"UpsellNotification"

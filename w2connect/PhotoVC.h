@@ -12,19 +12,20 @@
     IBOutlet UIImageView *imageView;
     IBOutlet UILabel *descriptionLabel;
     IBOutlet UIButton *photoBtn;
+    int counter;
 }
 
 
 @property (nonatomic, strong) IBOutlet UIImageView *imageView;
 @property (nonatomic, strong) IBOutlet UILabel *descriptionLabel;
 @property (nonatomic, strong) IBOutlet UIButton *photoBtn;
+@property int counter;
 
 
 -(IBAction)takePhoto:(id)sender;
--(void)loadProfile;
 -(void) uploadImageToAWS:chosenImage;
 -(void)postToServer:(NSString *)profileUrlString;
 -(UIImage *) reduceSize:(UIImage *) image;
--(bool) fromWizard;
+-(IBAction)backToProfile:(id)sender;
 
 @end

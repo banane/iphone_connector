@@ -24,13 +24,16 @@
 @property int numTimesLogin;
 @property (nonatomic, strong) NSDate *lastLoginDate;
 
-
 + (User *) instance;
 - (void) saveUser:(NSDictionary *)params email:(NSString *)theEmail;
 - (void) loadFromDefaults;
 - (void) saveToDefaults;
 - (void) incrementVisit;
+- (bool) needsLogin;
 - (bool) isValidToken;
+- (bool) hasNoPhoto;
+- (bool) isUserNotExpired;
+-(void) saveProfilePhoto:(NSString *)profile_photo;
 
 
 @end

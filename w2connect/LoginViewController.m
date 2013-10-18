@@ -76,7 +76,8 @@
         
         [[User instance ] saveUser:params email:self.email.text];
         
-        [self determineNextView];
+        [self dismissModalViewControllerAnimated:YES];
+
         
         
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
@@ -119,22 +120,6 @@
     
     
 }
-
--(void)determineNextView{
-   if([[[User instance] profilePhoto] length] == 0){
-        [self startWizard];
-    } else {
-        [self dismissModalViewControllerAnimated:YES];
-    }
-}
-
--(void)startWizard{
-    [self dismissModalViewControllerAnimated:NO];
-    
-    wizard1VC *wvc = [[wizard1VC alloc] initWithNibName:@"wizard1VC" bundle:nil];
-    [[self tabBarController] presentModalViewController:wvc animated:YES];
-}
-
 
 
 @end

@@ -54,6 +54,8 @@
 		EDA0A722180B65D700C95961 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EDA0A71E180B65D700C95961 /* Icon.png */; };
 		EDA0A723180B65D700C95961 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDA0A71F180B65D700C95961 /* Icon-Small@2x.png */; };
 		EDA0A724180B65D700C95961 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDA0A720180B65D700C95961 /* Icon@2x.png */; };
+		EDA680941811AC0E005542EC /* previewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA680921811AC0E005542EC /* previewVC.m */; };
+		EDA680951811AC0E005542EC /* previewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDA680931811AC0E005542EC /* previewVC.xib */; };
 		EDF7A1C817F76F2B00875DD8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF7A1C717F76F2B00875DD8 /* UIKit.framework */; };
 		EDF7A1CA17F76F2B00875DD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF7A1C917F76F2B00875DD8 /* Foundation.framework */; };
 		EDF7A1CC17F76F2B00875DD8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF7A1CB17F76F2B00875DD8 /* CoreGraphics.framework */; };
@@ -142,6 +144,9 @@
 		EDA0A71E180B65D700C95961 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		EDA0A71F180B65D700C95961 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		EDA0A720180B65D700C95961 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		EDA680911811AC0E005542EC /* previewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = previewVC.h; sourceTree = "<group>"; };
+		EDA680921811AC0E005542EC /* previewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = previewVC.m; sourceTree = "<group>"; };
+		EDA680931811AC0E005542EC /* previewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = previewVC.xib; path = w2connect/previewVC.xib; sourceTree = "<group>"; };
 		EDF7A1C417F76F2B00875DD8 /* connector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = connector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF7A1C717F76F2B00875DD8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EDF7A1C917F76F2B00875DD8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -231,6 +236,7 @@
 				ED1B5CF518035493005E8F90 /* ProfileVC.xib */,
 				ED94E74F180524030079F7A8 /* PhotoVC.xib */,
 				ED94E75418052ECA0079F7A8 /* wizard1VC.xib */,
+				EDA680931811AC0E005542EC /* previewVC.xib */,
 			);
 			name = Views;
 			path = ..;
@@ -253,6 +259,8 @@
 				ED94E74B180523130079F7A8 /* PhotoVC.m */,
 				ED94E75218052ECA0079F7A8 /* wizard1VC.h */,
 				ED94E75318052ECA0079F7A8 /* wizard1VC.m */,
+				EDA680911811AC0E005542EC /* previewVC.h */,
+				EDA680921811AC0E005542EC /* previewVC.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -490,6 +498,7 @@
 				ED2935AF1808EA68008537F1 /* noprofile.png in Resources */,
 				ED1B5D171804B415005E8F90 /* Lato-HaiIta.ttf in Resources */,
 				ED1B5D181804B415005E8F90 /* Lato-LigIta.ttf in Resources */,
+				EDA680951811AC0E005542EC /* previewVC.xib in Resources */,
 				ED2D5F2D180DEF5F003B3B4A /* photo.png in Resources */,
 				ED1B5D191804B415005E8F90 /* Lato-BlaIta.ttf in Resources */,
 				ED1B5D1B1804BA34005E8F90 /* pink_button.png in Resources */,
@@ -570,6 +579,7 @@
 				ED1B5CFB180354A3005E8F90 /* SearchVC.m in Sources */,
 				ED1B5D0118046334005E8F90 /* User.m in Sources */,
 				ED94E74C180523130079F7A8 /* PhotoVC.m in Sources */,
+				EDA680941811AC0E005542EC /* previewVC.m in Sources */,
 				ED94E75518052ECA0079F7A8 /* wizard1VC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

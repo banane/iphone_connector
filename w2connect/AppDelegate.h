@@ -17,8 +17,6 @@
 //@property (strong, nonatomic) UINavigationController *navigationController;
 @property (strong, nonatomic) UITabBarController *tabCtrl;
 
-- (bool)isUserTokenValid;
-- (bool)shouldUserLogin;
 
 
 @end

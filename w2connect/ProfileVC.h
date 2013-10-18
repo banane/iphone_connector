@@ -14,8 +14,9 @@
 
 @property (nonatomic, strong) IBOutlet UIWebView *webView;
 
--(void)launchPhoto:(id)sender;
-
+-(IBAction)launchPhoto:(id)sender;
+-(void)checkForWizard;
 -(void)drawWebView;
 
+-(IBAction)launchPreview:(id)sender;
 @end

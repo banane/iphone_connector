@@ -18,7 +18,7 @@
 
 
 @implementation PhotoVC
-@synthesize imageView, descriptionLabel, photoBtn;
+@synthesize imageView, descriptionLabel, photoBtn,counter;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,24 +28,26 @@
         // load image if it's there
         
         self.title = @"Add Photo";
+        self.counter = 0;
     }
     return self;
 }
 
 - (void)viewDidLoad{
     
+   
     
     self.navigationController.navigationBar.hidden = NO;
     self.navigationItem.hidesBackButton = YES;
     
     
     
-    if(![self fromWizard]){
+    if([[User instance] hasNoPhoto] == NO){                        /// anon users can't click profile
         UIBarButtonItem *profileBtn = [[UIBarButtonItem alloc]
                                        initWithImage:[UIImage imageNamed:@"profile"]
                                        style:UIBarButtonItemStyleBordered
                                        target:self
-                                       action:@selector(loadProfile)];
+                                       action:@selector(backToProfile:)];
         self.navigationItem.rightBarButtonItem = profileBtn;
     }
 
@@ -55,14 +57,18 @@
    
 }
 
--(bool) fromWizard {
-    bool returnValue = NO;
-    for( UIViewController* aView in [[self navigationController] viewControllers]){
-        if([aView isKindOfClass:[wizard1VC class]]){
-            returnValue = YES;
-        }
+-(IBAction)backToProfile:(id)sender{
+    [[self navigationController] popToRootViewControllerAnimated:NO];
+}
+
+
+-(void)viewDidAppear:(BOOL)animated {
+    if([[User instance] hasNoPhoto] && counter == 0){
+        wizard1VC *wVC = [[wizard1VC alloc] initWithNibName:@"wizard1VC" bundle:nil];
+        [self presentModalViewController:wVC animated:NO];
+        
     }
-    return returnValue;
+    counter += 1; // to make sure wizard just shows once
 }
 
 -(IBAction)takePhoto:(id)sender{
@@ -114,9 +120,11 @@
     AFJSONRequestOperation* operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         // 6 - Request succeeded block
         NSLog(@"profile photo upload response from json: %@", JSON);
+        NSDictionary *params = JSON;
         
-        [self loadProfile];
-        
+        [[User instance ] saveProfilePhoto:params[@"profile_photo"]];
+    
+        [[self navigationController] popToRootViewControllerAnimated:NO];
         
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"failure to post photo");
@@ -148,33 +156,7 @@
     return smallImage;
 }
 
--(void)loadProfile{
-   
-    if([self fromWizard]){
-        [self removeWizardFromVCStack];
-        ProfileVC *pvc = [[ProfileVC alloc] initWithNibName:@"ProfileVC" bundle:nil];
-        [[self navigationController] pushViewController:pvc animated:NO];
-    } else {
-        [[self navigationController] popViewControllerAnimated:NO];
-    }
-}
 
--(void)removeWizardFromVCStack{
-    int counter = 0;
-    int index;
-    for( UIViewController* aView in [[self navigationController] viewControllers]){
-        if([aView isKindOfClass:[wizard1VC class]]){
-            index= counter;
-        }
-        counter += 1;
-    }
-    
-    NSMutableArray *navigationArray = [[NSMutableArray alloc] initWithArray: self.navigationController.viewControllers];
-    
-    // [navigationArray removeAllObjects];    // This is just for remove all view controller from navigation stack.
-    [navigationArray removeObjectAtIndex: index];  // You can pass your index here
-    self.navigationController.viewControllers = navigationArray;
-}
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     

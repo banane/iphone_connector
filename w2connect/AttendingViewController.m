@@ -13,6 +13,7 @@
 #import "User.h"
 #import "LoginViewController.h"
 #import "AppDelegate.h"
+#import "wizard1VC.h"
 
 @implementation AttendingViewController
 @synthesize webView, alertView;
@@ -22,6 +23,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        
         self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Attending" image:[UIImage imageNamed:@"attendeelist"] tag:1];
         
 
@@ -31,14 +33,22 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    [self checkUserLogin];
+    [self userChecks];
     
     [self drawWebView];
+
 }
 
+-(void)userChecks{
+    [self checkUserLogin];
+    if([[User instance] isValidToken]){
+        [self checkForProfileCompleteness];
+    }
+}
+
+
 -(void)checkUserLogin{
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    if([appDelegate shouldUserLogin]){
+    if([[User instance] needsLogin] == YES){
         LoginViewController *loginVC = [[LoginViewController alloc] initWithNibName:@"LoginView_iPhone" bundle:nil];
         [self presentModalViewController:loginVC animated:YES];
     }
@@ -47,7 +57,7 @@
 
 - (void)viewDidLoad
 {
-    [self drawWebView];
+
     [super viewDidLoad];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -55,8 +65,19 @@
                                                  name:@"UpsellNotification"
                                                object:nil];
 }
+
+-(void)checkForProfileCompleteness{
+    if([[User instance] hasNoPhoto] == YES) {
+        
+        UITabBarController *MyTabController = (UITabBarController *)((AppDelegate*) [[UIApplication sharedApplication] delegate]).window.rootViewController;
+        [MyTabController setSelectedIndex:0];
+
+    }
+}
+
 -(void)drawWebView{
-    if([[User instance] isValidToken]){
+    
+    if([[User instance] isValidToken] == YES){
         
         NSString *stringUrl = [NSString stringWithFormat:@"%@/api/v1/people?auth_token=%@",kAPIBaseURLString,[[User instance] token]];
         NSURL *url = [[NSURL alloc] initWithString:stringUrl];

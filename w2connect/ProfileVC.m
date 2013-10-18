@@ -12,6 +12,7 @@
 #import "PhotoVC.h"
 #import "AttendingViewController.h"
 #include "wizard1VC.h"
+#include "previewVC.h"
 
 @interface ProfileVC ()
 
@@ -35,7 +36,18 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+    
+    [self checkForWizard];
     [self drawWebView];
+}
+
+-(void)checkForWizard{
+    if([[User instance] hasNoPhoto] == YES){
+        
+        PhotoVC *pvc = [[PhotoVC alloc] initWithNibName:@"PhotoVC" bundle:nil];
+        [[self navigationController] pushViewController:pvc animated:NO];
+    }
+
 }
 
 - (void)viewDidLoad
@@ -51,9 +63,22 @@
                                    action:@selector(launchPhoto:)];
     self.navigationItem.leftBarButtonItem = photoBtn;
     
+    UIBarButtonItem *previewBtn = [[UIBarButtonItem alloc]
+                                // initWithImage:[UIImage imageNamed:@"ProfileView"]
+                                 initWithTitle:@"Preview"
+                                 style:UIBarButtonItemStyleBordered
+                                 target:self
+                                 action:@selector(launchPreview:)];
+    self.navigationItem.rightBarButtonItem = previewBtn;
 
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+}
+
+-(IBAction)launchPreview:(id)sender{
+    previewVC *pvc = [[previewVC alloc] initWithNibName:@"previewVC" bundle:nil];
+    [[self navigationController] pushViewController:pvc animated:NO];
     
 }
 
