@@ -9,7 +9,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AttendingViewController : UIViewController <UIWebViewDelegate, UIAlertViewDelegate> {
+@interface AttendingViewController : UIViewController <UIWebViewDelegate, UIAlertViewDelegate, UITabBarControllerDelegate> {
     UIWebView *webView;
     UIAlertView *alertView;
 

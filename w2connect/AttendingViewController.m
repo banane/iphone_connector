@@ -25,7 +25,8 @@
     if (self) {
         
         self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Attending" image:[UIImage imageNamed:@"attendeelist"] tag:1];
-        
+
+       
 
     }
     
@@ -35,9 +36,23 @@
 -(void)viewDidAppear:(BOOL)animated{
     [self userChecks];
     
-    [self drawWebView];
+//    [self drawWebView];
 
 }
+
+- (void)tabBarController:(UITabBarController *)tabBarController
+ didSelectViewController:(UIViewController *)viewController
+{
+    if (self.tabBarController.selectedIndex == 1) {
+        // did select attendee
+    }
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    
+    [self drawWebView];
+}
+
 
 -(void)userChecks{
     [self checkUserLogin];
@@ -64,6 +79,11 @@
                                              selector:@selector(receiveUpsellNotification:)
                                                  name:@"UpsellNotification"
                                                object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(drawWebView)
+                                                 name:@"RefreshAttendeeListNotification"
+                                               object:nil];
+
 }
 
 -(void)checkForProfileCompleteness{

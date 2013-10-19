@@ -58,6 +58,12 @@
     
 }
 
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
+    
+    
+    
+}
+
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
@@ -90,6 +96,17 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    
+    NSLog(@"in did select vc");
+    if(self.tabCtrl.selectedIndex == 1){
+        [[NSNotificationCenter defaultCenter]
+         postNotificationName:@"RefreshAttendeeListNotification"
+         object:self];
+        NSLog(@"time to refresh view");
+    }
+    
+}
 
 
 @end
