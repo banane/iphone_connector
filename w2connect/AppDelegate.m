@@ -84,6 +84,7 @@
     NSLog(@"in app active");
 
     [[User instance] incrementVisit];
+    
     [[NSNotificationCenter defaultCenter]
      postNotificationName:@"UpsellNotification"
      object:self];

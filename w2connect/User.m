@@ -9,7 +9,7 @@
 #import "User.h"
 
 @implementation User
-@synthesize UID,email,numTimesLogin,profilePhoto,token, lastLoginDate;
+@synthesize UID,email,numTimesLogin,profilePhoto,token, lastLoginDate,member;
 
 static User * _instance = nil;
 
@@ -34,12 +34,17 @@ static User * _instance = nil;
     self.profilePhoto = @"";
     self.token = @"";
     self.lastLoginDate = [NSDate date];
+    self.member = 0;
     
     return self;
 }
 
 - (void)incrementVisit{
-    self.numTimesLogin += 1;
+    
+    
+    self.numTimesLogin = self.numTimesLogin +  1;
+    
+    NSLog(@"num times %d", self.numTimesLogin);
     
 }
 
@@ -48,6 +53,9 @@ static User * _instance = nil;
     self.UID = [params[@"id"] intValue];
     self.profilePhoto = params[@"profile_photo"];
     self.token = params[@"token"];
+    self.member = [params[@"member"] intValue];
+    self.lastLoginDate = [NSDate date]; // update to now
+        NSLog(@"num times %d", self.numTimesLogin);
     
 }
 
@@ -68,10 +76,10 @@ static User * _instance = nil;
     
     if(result==NSOrderedAscending){
         NSLog(@"Date1 is in the future");
-        result_value = YES;
+        result_value = NO;
     } else if(result==NSOrderedDescending) {
         NSLog(@"Date1 is in the past");
-        result_value = NO;
+        result_value = YES;
     } else {
         result_value = YES;
         NSLog(@"Both dates are the same");
@@ -107,6 +115,16 @@ static User * _instance = nil;
     }
 }
 
+-(bool)isMember{
+    
+    
+    if(self.member == 1){
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
 -(void)loadFromDefaults{
     NSLog(@"loading from defaults");
     self.numTimesLogin =  [[NSUserDefaults standardUserDefaults] integerForKey:@"num_times_login"];
@@ -114,20 +132,24 @@ static User * _instance = nil;
     self.token =  [[NSUserDefaults standardUserDefaults] objectForKey:@"token"];
     self.UID = [[NSUserDefaults standardUserDefaults] integerForKey:@"UID"];
     self.profilePhoto =  [[NSUserDefaults standardUserDefaults] objectForKey:@"profile_photo"];
+    self.member = [[NSUserDefaults standardUserDefaults] integerForKey:@"member"];
+    
+    NSLog(@"userNumTimes: %d", self.numTimesLogin);
 }
 
 -(void)saveToDefaults{
     NSLog(@"saving to defaults");
    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setInteger:self.numTimesLogin forKey:@"num_times"];
+    [defaults setInteger:self.numTimesLogin forKey:@"num_times_login"];
     [defaults setInteger:self.UID forKey:@"UID"];
     [defaults setObject:self.lastLoginDate forKey:@"last_login_date"];
     [defaults setObject:self.token forKey:@"token"];
     [defaults setObject:self.profilePhoto forKey:@"profile_photo"];
+    [defaults setInteger:self.member forKey:@"member"];
     [defaults synchronize];
     
-    NSLog(@"to save defaults: %@", defaults);
+    NSLog(@"num_times_login: %d", self.numTimesLogin);
     
 }
 

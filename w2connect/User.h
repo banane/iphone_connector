@@ -15,6 +15,7 @@
     NSString *profilePhoto;
     NSString *token;
     NSDate *lastLoginDate;
+    int member;
 }
 
 @property int UID;
@@ -23,6 +24,7 @@
 @property (nonatomic, strong) NSString *token;
 @property int numTimesLogin;
 @property (nonatomic, strong) NSDate *lastLoginDate;
+@property int member;
 
 + (User *) instance;
 - (void) saveUser:(NSDictionary *)params email:(NSString *)theEmail;
@@ -34,6 +36,7 @@
 - (bool) hasNoPhoto;
 - (bool) isUserNotExpired;
 -(void) saveProfilePhoto:(NSString *)profile_photo;
+-(bool) isMember;
 
 
 @end
