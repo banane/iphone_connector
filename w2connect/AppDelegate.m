@@ -14,6 +14,7 @@
 #import "SearchVC.h"
 #import "AttendingViewController.h"
 #import "LoginViewController.h"
+#import "Constants.h"
 
 
 @implementation AppDelegate
@@ -45,7 +46,7 @@
     self.tabCtrl.viewControllers = [[NSArray alloc] initWithObjects:pNavCtrl, attVC, sVC, nil];
     self.tabCtrl.selectedIndex = 1;
     
-    [TestFlight takeOff:@"75456710-2e74-46c0-a034-57293f61079e"];
+    [TestFlight takeOff:testFlightToken];
 
 
     

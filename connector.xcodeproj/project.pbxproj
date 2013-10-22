@@ -687,8 +687,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 140E2582299F40BCBFE90CA2 /* Pods.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Shaherose Charania (K2AH7BY5AB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shaherose Charania (K2AH7BY5AB)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/banane/dev/iOS/w2connect,
@@ -702,7 +702,7 @@
 					/Users/banane/dev/iOS/w2connect/TestFlightSDK2.0.2,
 				);
 				PRODUCT_NAME = connector;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "243D1421-AB84-429D-9675-6C06CAA9E075";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -712,7 +712,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 140E2582299F40BCBFE90CA2 /* Pods.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Anna BILLSTROM (3PKSYT4R4Q)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shaherose Charania (G5C4REBPDN)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Anna BILLSTROM (3PKSYT4R4Q)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -728,7 +728,7 @@
 				);
 				PRODUCT_NAME = connector;
 				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0E4415C0-E84F-40EA-8BB9-2E59DB156B39";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5499084F-83A1-4F91-8B7B-276B15A79B96";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
